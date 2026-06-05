@@ -1,0 +1,13 @@
+{
+    "name": "@miska-ramen/database",
+    "version": "1.0.0",
+    "main": "index.ts",
+    "dependencies": {
+        "@prisma/adapter-pg": "^7.8.0",
+        "@prisma/client": "latest",
+        "dotenv": "^17.4.2"
+    },
+    "devDependencies": {
+        "prisma": "latest"
+    }
+}
