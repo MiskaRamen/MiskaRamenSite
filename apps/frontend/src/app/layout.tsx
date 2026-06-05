@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://miskaramen.cz'),
+    metadataBase: new URL('https://miska-ramen-site-frontend.vercel.app'),
     title: {
         default: 'Miska Ramen | Authentic Tonkotsu in Prague',
         template: '%s | Miska Ramen',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://miskaramen.cz',
+        url: 'https://miska-ramen-site-frontend.vercel.app',
         title: 'Miska Ramen | Authentic Tonkotsu in Prague',
         description: 'Authentic Tokyo-style ramen bar in Prague 2, Vinohrady. Book your table today.',
         siteName: 'Miska Ramen',
