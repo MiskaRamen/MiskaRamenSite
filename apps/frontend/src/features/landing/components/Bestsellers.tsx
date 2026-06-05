@@ -78,6 +78,8 @@ export function Bestsellers() {
                                 <Image
                                     src={dish.image}
                                     alt={dish.name}
+                                    quality={60}
+                                    priority={i === 0}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                                     sizes="(max-width: 768px) 85vw, 33vw"
@@ -90,7 +92,7 @@ export function Bestsellers() {
                                     <h3 className="text-[#F5EDD8] font-sans font-bold text-xl md:text-2xl mb-3 line-clamp-2 min-h-14 md:min-h-16">
                                         {dish.name}
                                     </h3>
-                                    <p className="text-[#8C7B6A] font-sans text-sm md:text-base line-clamp-3 leading-relaxed">
+                                    <p className="text-[#A69B8F] font-sans text-sm md:text-base line-clamp-3 leading-relaxed">
                                         {dish.description}
                                     </p>
                                 </div>

@@ -18,3 +18,24 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Анімація появи знизу-вгору */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Клас, який ми будемо вішати на елементи.
+   "animation-fill-mode: both" - це магія, яка тримає opacity: 0 
+   до того моменту, поки не пройде delay (затримка). 
+*/
+.css-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}

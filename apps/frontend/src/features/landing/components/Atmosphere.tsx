@@ -32,12 +32,13 @@ export function Atmosphere() {
                         <Image
                             src="/Atmosphere/MainAtmosphere.png"
                             alt="Miska Ramen Interior"
+                            quality={70}
                             fill
                             loading="lazy"
                             className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0a07] via-transparent to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-0" />
+                        <div className="absolute inset-0 bg-linear-to-t from-[#0d0a07] via-transparent to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-0" />
                     </motion.div>
 
                     {/* 2. МАЛЕНЬКЕ ФОТО 1 (Зверху справа) */}
@@ -50,6 +51,7 @@ export function Atmosphere() {
                         <Image
                             src="/Atmosphere/AtmosphereFood.png"
                             alt="Atmosphere Detail"
+                            quality={60}
                             fill
                             loading="lazy"
                             className="object-cover transition-all duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100 "
@@ -67,6 +69,7 @@ export function Atmosphere() {
                         <Image
                             src="/Atmosphere/AtmosphereFood2.png"
                             alt="Kitchen Detail"
+                            quality={60}
                             fill
                             loading="lazy"
                             className="object-cover transition-all duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100"
@@ -82,7 +85,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="col-span-1 relative rounded-2xl overflow-hidden bg-[#1a1108] border border-[#2E1F0F] flex flex-col items-center justify-center p-6 text-center">
                         {/* Тонкий фоновий патерн або ледь помітне фото */}
-                        <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center opacity-[0.03]" />
+                        <div className="absolute inset-0 bg-[url('/Atmosphere/MainAtmosphere.png')] bg-cover bg-center opacity-[0.03]" />
                         <p className="relative z-10 font-serif italic text-2xl md:text-3xl text-[#F5EDD8] leading-snug">
                             &quot;Warm, <br /> intimate,&quot;
                         </p>

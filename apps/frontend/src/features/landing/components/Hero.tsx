@@ -16,6 +16,7 @@ export function Hero() {
                 <Image
                     src="https://www.byblos.com/wp-content/uploads/Restaurant-IL-Giardino_Hotel-Byblos_Saint-Tropez-%C2%A9Stephan-Julliard-7-1600x1000.jpg" // Переконайся, що фото є в public/
                     alt="Authentic Tonkotsu Ramen"
+                    quality={75}
                     fill
                     priority
                     className="object-cover object-center opacity-80"
@@ -25,45 +26,35 @@ export function Hero() {
             </div>
 
             <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl mt-16">
-                <motion.span
-                    variants={fadeInUp}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    className="font-jp text-[#E8632A] tracking-[0.3em] text-sm md:text-base font-bold mb-4">
+                {/* Японський акцент */}
+                <span className="css-fade-in-up font-jp text-[#E8632A] tracking-[0.3em] text-sm md:text-base font-bold mb-4 block">
                     ラーメン
-                </motion.span>
+                </span>
 
-                <motion.h1
-                    variants={fadeInUp}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-                    className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-[#F5EDD8] leading-tight md:leading-[1.1] mb-6">
+                {/* Головний заголовок */}
+                <h1
+                    className="css-fade-in-up font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-[#F5EDD8] leading-tight md:leading-[1.1] mb-6"
+                    style={{ animationDelay: '200ms' }}>
                     Born in Tokyo,
                     <br />
                     <span className="italic font-medium text-white">Served in Prague.</span>
-                </motion.h1>
+                </h1>
 
-                <motion.div
-                    variants={fadeInUp}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
-                    className="flex items-center gap-3 text-[#F5EDD8] font-sans text-sm md:text-base mb-10 bg-[#1a1108]/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[#2E1F0F]">
+                {/* Статус і локація */}
+                <div
+                    className="css-fade-in-up flex items-center gap-3 text-[#F5EDD8] font-sans text-sm md:text-base mb-10 bg-[#1a1108]/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[#2E1F0F]"
+                    style={{ animationDelay: '400ms' }}>
                     <span className="relative flex h-2.5 w-2.5">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
                     </span>
                     <span>Open now &middot; Španělská 2, Vinohrady</span>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    variants={fadeInUp}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
-                    className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                {/* Кнопки дії */}
+                <div
+                    className="css-fade-in-up flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+                    style={{ animationDelay: '600ms' }}>
                     <Link
                         href="#book"
                         className="w-full sm:w-auto px-8 py-4 bg-[#E8632A] hover:bg-[#FF7A3D] text-[#F5EDD8] font-sans font-medium text-lg rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(232,99,42,0.5)] flex justify-center items-center gap-2 group">
@@ -78,7 +69,7 @@ export function Hero() {
                         className="w-full sm:w-auto px-8 py-4 bg-transparent border border-[#F5EDD8]/30 hover:border-[#F5EDD8] text-[#F5EDD8] font-sans font-medium text-lg rounded transition-all duration-300 flex justify-center items-center">
                         Get Directions
                     </Link>
-                </motion.div>
+                </div>
             </div>
 
             <motion.div

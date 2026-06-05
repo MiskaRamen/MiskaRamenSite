@@ -20,7 +20,7 @@ export function FindUs() {
                             </h2>
 
                             {/* Адреса */}
-                            <div className="font-sans text-lg text-[#8C7B6A] space-y-1">
+                            <div className="font-sans text-lg text-[#A69B8F] space-y-1">
                                 <p>Španělská 2</p>
                                 <p>120 00 Praha 2-Vinohrady</p>
                                 <p>Czech Republic</p>
