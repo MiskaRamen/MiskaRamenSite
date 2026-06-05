@@ -57,7 +57,7 @@ export function Hero() {
                     style={{ animationDelay: '600ms' }}>
                     <Link
                         href="#book"
-                        className="w-full sm:w-auto px-8 py-4 bg-[#E8632A] hover:bg-[#FF7A3D] text-[#F5EDD8] font-sans font-medium text-lg rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(232,99,42,0.5)] flex justify-center items-center gap-2 group">
+                        className="w-full sm:w-auto px-8 py-4 bg-[#E8632A] hover:bg-[#FF7A3D] text-[#F5EDD8] font-sans font-bold text-lg rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(232,99,42,0.5)] flex justify-center items-center gap-2 group">
                         Book a Table
                         <span className="transform translate-x-0 group-hover:translate-x-1 transition-transform">
                             &rarr;
@@ -67,7 +67,7 @@ export function Hero() {
                     <Link
                         href="#find-us"
                         className="w-full sm:w-auto px-8 py-4 bg-transparent border border-[#F5EDD8]/30 hover:border-[#F5EDD8] text-[#F5EDD8] font-sans font-medium text-lg rounded transition-all duration-300 flex justify-center items-center">
-                        Get Directions
+                        Location & Hours
                     </Link>
                 </div>
             </div>
