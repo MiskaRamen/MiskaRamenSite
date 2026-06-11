@@ -26,3 +26,22 @@ export interface Product {
     likes: number;
     options: ProductOptions;
 }
+
+export interface Location {
+    id: string;
+    name: string;
+    address: string;
+    imageBg: string;
+    isOpen: boolean;
+    phone: string;
+    workingHours: {
+        mon: string;
+        tue: string;
+        wed: string;
+        thu: string;
+        fri: string;
+        sat: string;
+        sun: string;
+    };
+    directLink: string;
+}

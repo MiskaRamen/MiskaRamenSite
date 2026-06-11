@@ -3,10 +3,15 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { scrollToSection } from '@/src/utils/scroll';
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const pathname = usePathname();
+    const menuPath = `${pathname}/menu`;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -50,12 +55,13 @@ export function Navbar() {
 
                     <nav className="hidden md:flex items-center gap-8">
                         <Link
-                            href="/menu"
+                            href={menuPath}
                             className="text-sm font-sans text-[#F5EDD8] hover:text-[#E8632A] transition-colors duration-200">
                             Menu
                         </Link>
                         <Link
                             href="#find-us"
+                            onClick={(e) => scrollToSection(e, 'find-us')}
                             className="text-sm font-sans text-[#F5EDD8] hover:text-[#E8632A] transition-colors duration-200">
                             Find Us
                         </Link>
@@ -97,15 +103,15 @@ export function Navbar() {
                 }`}>
                 <div className="flex flex-col items-center justify-center h-full gap-8">
                     <Link
-                        href="/menu"
+                        href={menuPath}
                         className="text-2xl font-serif text-[#F5EDD8] hover:text-[#E8632A] transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}>
                         Menu
                     </Link>
                     <Link
                         href="#find-us"
-                        className="text-2xl font-serif text-[#F5EDD8] hover:text-[#E8632A] transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}>
+                        onClick={(e) => scrollToSection(e, 'find-us', () => setIsMobileMenuOpen(false))}
+                        className="text-2xl font-serif text-[#F5EDD8] hover:text-[#E8632A] transition-colors">
                         Find Us
                     </Link>
                     <button

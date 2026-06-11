@@ -2,7 +2,24 @@
 
 import { motion } from 'framer-motion';
 
-export function FindUs() {
+interface FindUsProps {
+    address: string;
+    phone: string;
+    directLink: string;
+    workingHours: {
+        mon: string;
+        tue: string;
+        wed: string;
+        thu: string;
+        fri: string;
+        sat: string;
+        sun: string;
+    };
+}
+
+export function FindUs({ address, phone, directLink, workingHours }: FindUsProps) {
+    const splitAddress = address.split(',').map((part) => part.trim());
+
     return (
         <>
             <section id="find-us" className="py-24 bg-[#0d0a07] w-full relative z-10 border-t border-[#E8632A]/30">
@@ -21,24 +38,25 @@ export function FindUs() {
 
                             {/* Адреса */}
                             <div className="font-sans text-lg text-[#A69B8F] space-y-1">
-                                <p>Španělská 2</p>
-                                <p>120 00 Praha 2-Vinohrady</p>
+                                {splitAddress.map((part, index) => (
+                                    <p key={index}>{part}</p>
+                                ))}
                                 <p>Czech Republic</p>
                             </div>
 
                             {/* Клікабельний телефон */}
                             <div className="mt-8">
                                 <a
-                                    href="tel:+420776357984"
+                                    href={`tel:${phone}`}
                                     className="text-[#F5EDD8] font-sans text-xl md:text-2xl tracking-wide hover:text-[#E8632A] transition-colors">
-                                    +420 776 357 984
+                                    {phone}
                                 </a>
                             </div>
 
                             {/* Кнопка маршруту */}
                             <div className="mt-10">
                                 <a
-                                    href="https://www.google.com/maps/place/Miska+Ramen+Bar-za+muzeem/@50.0791697,14.4333444,19z/data=!3m1!4b1!4m6!3m5!1s0x470b95a500bd6be5:0x284edcbe70b6397b!8m2!3d50.0791688!4d14.4339881!16s%2Fg%2F11h2ycnt9_?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+                                    href={directLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-[#F5EDD8]/30 hover:border-[#F5EDD8] text-[#F5EDD8] font-sans font-medium text-lg rounded transition-all duration-300 w-full sm:w-auto">
@@ -61,8 +79,32 @@ export function FindUs() {
                             {/* Розклад */}
                             <ul className="font-sans text-lg text-[#8C7B6A] space-y-4 w-full max-w-md">
                                 <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
-                                    <span>Monday – Sunday</span>
-                                    <span className="text-[#F5EDD8]">11:00 – 22:00</span>
+                                    <span>Monday</span>
+                                    <span className="text-[#F5EDD8]">{workingHours.mon}</span>
+                                </li>
+                                <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
+                                    <span>Tuesday</span>
+                                    <span className="text-[#F5EDD8]">{workingHours.tue}</span>
+                                </li>
+                                <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
+                                    <span>Wednesday</span>
+                                    <span className="text-[#F5EDD8]">{workingHours.wed}</span>
+                                </li>
+                                <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
+                                    <span>Thursday</span>
+                                    <span className="text-[#F5EDD8]">{workingHours.thu}</span>
+                                </li>
+                                <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
+                                    <span>Friday</span>
+                                    <span className="text-[#F5EDD8]">{workingHours.fri}</span>
+                                </li>
+                                <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
+                                    <span>Saturday</span>
+                                    <span className="text-[#F5EDD8]">{workingHours.sat}</span>
+                                </li>
+                                <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
+                                    <span>Sunday</span>
+                                    <span className="text-[#F5EDD8]">{workingHours.sun}</span>
                                 </li>
                             </ul>
 

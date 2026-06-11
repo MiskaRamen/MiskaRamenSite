@@ -1,28 +1,6 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, DM_Sans, Noto_Sans_JP } from 'next/font/google';
 import '../globals.css';
 import { Footer, Navbar } from '@/src/components/shared';
-
-const cormorant = Cormorant_Garamond({
-    subsets: ['latin'],
-    weight: ['400', '600', '700'],
-    variable: '--font-cormorant',
-    display: 'swap',
-});
-
-const dmSans = DM_Sans({
-    subsets: ['latin'],
-    weight: ['400', '500', '700'],
-    variable: '--font-dm-sans',
-    display: 'swap',
-});
-
-const notoSansJP = Noto_Sans_JP({
-    subsets: ['latin'],
-    weight: ['500', '700'],
-    variable: '--font-noto-jp',
-    display: 'swap',
-});
 
 export const viewport: Viewport = {
     themeColor: '#0d0a07',

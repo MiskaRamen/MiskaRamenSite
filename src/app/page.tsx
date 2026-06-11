@@ -1,25 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-
-const LOCATIONS = [
-    {
-        id: 'vinohrady',
-        name: 'Vinohrady',
-        address: 'Španělská 2, 120 00 Praha 2',
-        imageBg: 'bg-[url("/images/vinohrady-bg.jpg")]', // Заміниш на своє фото
-        status: 'Open now',
-        isOpen: true,
-    },
-    {
-        id: 'mala-strana',
-        name: 'Malá Strana',
-        address: 'Адреса Малої Страни, Praha 1', // Допишеш їхню нову адресу
-        imageBg: 'bg-[url("/images/mala-strana-bg.jpg")]', // Заміниш на своє фото
-        status: 'Opening soon', // Або 'Open now'
-        isOpen: false, // Зміниш на true, коли точка відкриється
-    },
-];
+import LOCATIONS from '@/src/data/locations';
 
 export default function LocationPicker() {
     return (
@@ -65,7 +47,7 @@ export default function LocationPicker() {
                                         } shadow-[0_0_8px_currentColor]`}
                                     />
                                     <span className="text-[12px] font-medium text-[#ede3ca] tracking-wide">
-                                        {loc.status}
+                                        {loc.isOpen ? 'Open now' : 'Closed'}
                                     </span>
                                 </div>
                             </div>

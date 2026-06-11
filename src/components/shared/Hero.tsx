@@ -3,18 +3,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { scrollToSection } from '@/src/utils/scroll';
 
-export function Hero() {
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0 },
-    };
+interface HeroProps {
+    address: string;
+}
+
+export function Hero({ address }: HeroProps) {
+    const isOpenNow = new Date().getHours() >= 11 && new Date().getHours() < 22; // Приклад: відкрито з 11:00 до 22:00
 
     return (
         <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0 bg-[#0d0a07]">
                 <Image
-                    src="https://www.byblos.com/wp-content/uploads/Restaurant-IL-Giardino_Hotel-Byblos_Saint-Tropez-%C2%A9Stephan-Julliard-7-1600x1000.jpg" // Переконайся, що фото є в public/
+                    src="https://www.byblos.com/wp-content/uploads/Restaurant-IL-Giardino_Hotel-Byblos_Saint-Tropez-%C2%A9Stephan-Julliard-7-1600x1000.jpg"
                     alt="Authentic Tonkotsu Ramen"
                     quality={75}
                     fill
@@ -48,7 +50,9 @@ export function Hero() {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
                     </span>
-                    <span>Open now &middot; Španělská 2, Vinohrady</span>
+                    <span>
+                        {isOpenNow ? 'Open now' : 'Closed'} &middot; {address}
+                    </span>
                 </div>
 
                 {/* Кнопки дії */}
@@ -66,6 +70,7 @@ export function Hero() {
 
                     <Link
                         href="#find-us"
+                        onClick={(e) => scrollToSection(e, 'find-us')}
                         className="w-full sm:w-auto px-8 py-4 bg-transparent border border-[#F5EDD8]/30 hover:border-[#F5EDD8] text-[#F5EDD8] font-sans font-medium text-lg rounded transition-all duration-300 flex justify-center items-center">
                         Location & Hours
                     </Link>
@@ -80,7 +85,7 @@ export function Hero() {
                 <motion.div
                     animate={{ y: [0, -15, 0] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
-                    <Link href="#menu" aria-label="Scroll to menu">
+                    <Link href="#menu" onClick={(e) => scrollToSection(e, 'menu')} aria-label="Scroll to menu">
                         <svg
                             className="w-6 h-6 text-[#F5EDD8]/50 hover:text-[#E8632A] transition-colors"
                             fill="none"
