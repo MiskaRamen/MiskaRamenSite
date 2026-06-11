@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const dishes = [
     {
@@ -32,6 +33,9 @@ const dishes = [
 ];
 
 export function Bestsellers() {
+    const pathname = usePathname();
+    const menuPath = `${pathname}/menu`;
+
     return (
         <section id="menu" className="py-24 bg-[#0d0a07] w-full relative z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +59,7 @@ export function Bestsellers() {
                         transition={{ duration: 0.6 }}
                         className="hidden sm:block">
                         <Link
-                            href="#full-menu"
+                            href={menuPath}
                             className="group flex items-center gap-2 text-[#F5EDD8]/70 hover:text-[#E8632A] transition-colors font-sans text-sm font-medium">
                             View Full Menu
                             <span className="transform translate-x-0 group-hover:translate-x-1 transition-transform">
@@ -110,7 +114,7 @@ export function Bestsellers() {
 
                 <div className="mt-6 flex justify-center sm:hidden">
                     <Link
-                        href="#full-menu"
+                        href={menuPath}
                         className="text-[#F5EDD8] hover:text-[#E8632A] transition-colors font-sans text-sm font-medium underline underline-offset-4">
                         View Full Menu
                     </Link>

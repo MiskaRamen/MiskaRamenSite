@@ -50,7 +50,7 @@ export function Navbar() {
 
                     <nav className="hidden md:flex items-center gap-8">
                         <Link
-                            href="#menu"
+                            href="/menu"
                             className="text-sm font-sans text-[#F5EDD8] hover:text-[#E8632A] transition-colors duration-200">
                             Menu
                         </Link>
@@ -97,7 +97,7 @@ export function Navbar() {
                 }`}>
                 <div className="flex flex-col items-center justify-center h-full gap-8">
                     <Link
-                        href="#menu"
+                        href="/menu"
                         className="text-2xl font-serif text-[#F5EDD8] hover:text-[#E8632A] transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}>
                         Menu

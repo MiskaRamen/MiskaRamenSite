@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, DM_Sans, Noto_Sans_JP } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { Footer, Navbar } from '@/src/components/shared';
 
 const cormorant = Cormorant_Garamond({
@@ -93,10 +93,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html
-            lang="en"
-            className={`${cormorant.variable} ${dmSans.variable} ${notoSansJP.variable} h-full antialiased`}>
-            <body className="min-h-full flex flex-col">{children}</body>
-        </html>
+        <div className="min-h-full flex flex-col">
+            <Navbar />
+            {children}
+            <Footer />
+        </div>
     );
 }

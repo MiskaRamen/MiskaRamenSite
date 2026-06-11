@@ -61,16 +61,8 @@ export function FindUs() {
                             {/* Розклад */}
                             <ul className="font-sans text-lg text-[#8C7B6A] space-y-4 w-full max-w-md">
                                 <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
-                                    <span>Mon – Thu</span>
-                                    <span className="text-[#F5EDD8]">11:30 – 22:00</span>
-                                </li>
-                                <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
-                                    <span>Fri – Sat</span>
-                                    <span className="text-[#F5EDD8]">11:30 – 23:00</span>
-                                </li>
-                                <li className="flex justify-between items-center border-b border-[#2E1F0F] pb-3">
-                                    <span>Sunday</span>
-                                    <span className="text-[#F5EDD8]">12:00 – 21:30</span>
+                                    <span>Monday – Sunday</span>
+                                    <span className="text-[#F5EDD8]">11:00 – 22:00</span>
                                 </li>
                             </ul>
 

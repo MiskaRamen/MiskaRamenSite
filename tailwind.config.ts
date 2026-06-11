@@ -9,6 +9,7 @@ const config: Config = {
                 serif: ['var(--font-cormorant)', 'serif'],
                 sans: ['var(--font-dm-sans)', 'sans-serif'],
                 jp: ['var(--font-noto-jp)', 'sans-serif'],
+                playfair: ['Playfair Display', 'Georgia', 'serif'],
             },
             // 🔥 Додаємо плавні анімації для Hero
             keyframes: {
