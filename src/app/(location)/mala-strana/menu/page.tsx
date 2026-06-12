@@ -1,118 +1,68 @@
-'use client';
+import { products } from '@/src/data/menus/menu-mala-strana';
+import { CategoryMalaStrana } from '@/src/types/types';
+import { MenuComponent } from '@/src/components/shared';
 
-import { useState } from 'react';
-import { products } from '@/src/data/menu';
-import Popup from '@/src/components/ui/Popup';
-import { Category, Product } from '@/src/types/types';
+type Filter = 'all' | CategoryMalaStrana;
 
-type Filter = 'all' | Category;
-
-const SECTIONS: { cat: Category; eyebrow: string; title: string }[] = [
-    { cat: 'ramen', eyebrow: 'ラーメン', title: 'Ramen' },
-    { cat: 'sides', eyebrow: 'おつまみ', title: 'Sides' },
-    { cat: 'drinks', eyebrow: 'ドリンク', title: 'Drinks' },
+const SECTIONS: { cat: CategoryMalaStrana; eyebrow: string; title: string }[] = [
+    { cat: 'appetizers', eyebrow: '前菜', title: 'Appetizers' },
+    { cat: 'hakata-tonkotsu', eyebrow: '博多豚骨', title: 'Hakata Tonkotsu' },
+    { cat: 'tan-tan-ramen', eyebrow: '担々麺', title: 'Tan Tan Ramen' },
+    { cat: 'kimchi-ramen', eyebrow: 'キムチラーメン', title: 'Kimchi Ramen' },
+    { cat: 'sapporo-miso', eyebrow: '札幌味噌', title: 'Sapporo Miso' },
+    { cat: 'gyokotsu-beef', eyebrow: '牛骨', title: 'Gyokotsu Beef' },
+    { cat: 'tokyo-shoyu', eyebrow: '東京醤油', title: 'Tokyo Shoyu' },
+    { cat: 'wonton-men', eyebrow: 'ワンタン麺', title: 'Wonton Men' },
+    { cat: 'seafood-ramen', eyebrow: '魚介ラーメン', title: 'Seafood Ramen' },
+    { cat: 'mazemen', eyebrow: 'まぜそば', title: 'Mazemen' },
+    { cat: 'ramen-hall', eyebrow: 'ラーメンサラダ', title: 'Ramen Salad' },
+    { cat: 'vegan-ramen', eyebrow: 'ヴィーガンラーメン', title: 'Vegan Ramen' },
+    { cat: 'curry-don', eyebrow: 'カレー丼', title: 'Curry Don' },
+    { cat: 'curry-udon', eyebrow: 'カレーうどん', title: 'Curry Udon' },
+    { cat: 'tofu-rolls', eyebrow: '豆腐', title: 'Tofu & Rice' },
+    { cat: 'extra-sides', eyebrow: '追加の具材', title: 'Extra Sides' },
+    { cat: 'sake', eyebrow: '日本酒', title: 'Sake' },
+    { cat: 'dessert', eyebrow: 'デザート', title: 'Desserts' },
+    { cat: 'nigiri-2-pcs', eyebrow: '握り寿司', title: 'Nigiri (2 pcs)' },
+    { cat: 'maki', eyebrow: '巻き寿司', title: 'Maki' },
+    { cat: 'sashimi', eyebrow: '刺身', title: 'Sashimi' },
+    { cat: 'sushi-roll', eyebrow: '寿司ロール', title: 'Sushi Roll' },
+    { cat: 'futo-maki-10-pcs', eyebrow: '太巻き', title: 'Futo Maki' },
+    { cat: 'sushi-set', eyebrow: '寿司セット', title: 'Sushi Set' },
 ];
 
 const TABS: { label: string; value: Filter }[] = [
     { label: 'All', value: 'all' },
-    { label: 'Ramen', value: 'ramen' },
-    { label: 'Sides', value: 'sides' },
-    { label: 'Drinks', value: 'drinks' },
+    { label: 'Appetizers', value: 'appetizers' },
+    { label: 'Hakata Tonkotsu', value: 'hakata-tonkotsu' },
+    { label: 'Tan Tan Ramen', value: 'tan-tan-ramen' },
+    { label: 'Kimchi Ramen', value: 'kimchi-ramen' },
+    { label: 'Sapporo Miso', value: 'sapporo-miso' },
+    { label: 'Gyokotsu Beef', value: 'gyokotsu-beef' },
+    { label: 'Tokyo Shoyu', value: 'tokyo-shoyu' },
+    { label: 'Wonton Men', value: 'wonton-men' },
+    { label: 'Seafood Ramen', value: 'seafood-ramen' },
+    { label: 'Mazemen', value: 'mazemen' },
+    { label: 'Ramen Salad', value: 'ramen-hall' },
+    { label: 'Vegan Ramen', value: 'vegan-ramen' },
+    { label: 'Curry Don', value: 'curry-don' },
+    { label: 'Curry Udon', value: 'curry-udon' },
+    { label: 'Tofu Dishes', value: 'tofu-rolls' },
+    { label: 'Extra Sides', value: 'extra-sides' },
+    { label: 'Sake', value: 'sake' },
+    { label: 'Desserts', value: 'dessert' },
+    { label: 'Nigiri', value: 'nigiri-2-pcs' },
+    { label: 'Maki', value: 'maki' },
+    { label: 'Sashimi', value: 'sashimi' },
+    { label: 'Sushi Roll', value: 'sushi-roll' },
+    { label: 'Futo Maki', value: 'futo-maki-10-pcs' },
+    { label: 'Sushi Set', value: 'sushi-set' },
 ];
 
 export default function Menu() {
-    const [filter, setFilter] = useState<Filter>('all');
-    const [activeProduct, setActiveProduct] = useState<Product | null>(null);
-
     return (
         <main className="min-h-screen bg-[#120f08] text-[#ede3ca] font-sans antialiased pt-16">
-            {/* ── Category tabs ─────────────────────────────────────── */}
-            <div
-                role="tablist"
-                className="flex overflow-x-auto px-12 max-[900px]:px-5 border-b border-[#2b2010] mb-[52px]
-                   [scrollbar-width:none] [&::-webkit-scrollbar]:w-0">
-                {TABS.map((t) => (
-                    <button
-                        key={t.value}
-                        role="tab"
-                        aria-selected={filter === t.value}
-                        onClick={() => setFilter(t.value)}
-                        className={[
-                            'px-[22px] py-[14px] bg-transparent border-0 border-b-2 border-solid',
-                            'text-sm font-medium cursor-pointer whitespace-nowrap font-[inherit] -mb-px',
-                            'transition-colors duration-150',
-                            filter === t.value
-                                ? 'text-[#ede3ca] border-b-[#e55628]'
-                                : 'text-[#8a7f6a] border-b-transparent hover:text-[#ede3ca]',
-                        ].join(' ')}>
-                        {t.label}
-                    </button>
-                ))}
-            </div>
-
-            {/* ── Menu sections ─────────────────────────────────────── */}
-            {SECTIONS.filter((s) => filter === 'all' || filter === s.cat).map((s) => {
-                const items = products.filter((p) => p.cat === s.cat);
-                return (
-                    <section className="mb-14" key={s.cat} id={`sec-${s.cat}`}>
-                        {/* Section heading */}
-                        <div className="px-12 max-[900px]:px-5 mb-7">
-                            <p className="text-[11px] tracking-[0.2em] text-[#e55628] mb-1.5">{s.eyebrow}</p>
-                            <h2 className="font-playfair text-[30px] font-bold text-[#ede3ca]">{s.title}</h2>
-                        </div>
-
-                        {/* Product grid */}
-                        <div
-                            className="grid grid-cols-3 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1
-                            gap-5 px-12 max-[900px]:px-5">
-                            {items.map((product) => (
-                                <button
-                                    key={product.id}
-                                    onClick={() => setActiveProduct(product)}
-                                    aria-label={`View ${product.name}`}
-                                    className="bg-[#1c1508] rounded-[14px] overflow-hidden cursor-pointer
-         border border-[#2b2010] flex flex-col text-left appearance-none
-         p-0 w-full transition-all duration-300 ease-out
-         hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(0,0,0,0.5)]
-         focus-visible:outline-2 focus-visible:outline-[#e55628]
-         focus-visible:outline-offset-2">
-                                    {/* Card image */}
-                                    <div
-                                        className="h-65 flex items-center justify-center text-[100px]
-                               select-none shrink-0"
-                                        style={{
-                                            background: 'radial-gradient(ellipse at 50% 60%, #f0e8d5 0%, #e4dac8 100%)',
-                                        }}>
-                                        <span className="block leading-none drop-shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
-                                            {product.emoji}
-                                        </span>
-                                    </div>
-
-                                    {/* Card body */}
-                                    <div className="pt-[22px] px-[22px] pb-[26px] flex-1 flex flex-col">
-                                        <h3
-                                            className="font-playfair text-[20px] font-bold text-[#ede3ca]
-                                   leading-[1.25] mb-[10px]">
-                                            {product.name}
-                                        </h3>
-                                        <p
-                                            className="text-[13px] text-[#8a7f6a] leading-[1.65] flex-1
-                                  line-clamp-3 mb-[18px]">
-                                            {product.desc}
-                                        </p>
-                                        <span className="text-[18px] font-bold text-[#cc2929]">{product.price} Kč</span>
-                                    </div>
-                                </button>
-                            ))}
-                        </div>
-                    </section>
-                );
-            })}
-
-            {/* ── Popup ─────────────────────────────────────────────── */}
-            <Popup product={activeProduct} onClose={() => setActiveProduct(null)} />
-
-            <div className="h-[60px]" />
+            <MenuComponent TABS={TABS} SECTIONS={SECTIONS} products={products} />
         </main>
     );
 }

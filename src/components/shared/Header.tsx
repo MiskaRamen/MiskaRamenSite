@@ -11,7 +11,15 @@ export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const pathname = usePathname();
-    const menuPath = `${pathname}/menu`;
+
+    const isMalaStrana = pathname.includes('/mala-strana');
+    const isVinohrady = pathname.includes('/vinohrady');
+
+    const basePath = isMalaStrana ? '/mala-strana' : isVinohrady ? '/vinohrady' : '';
+    const menuPath = basePath ? `${basePath}/menu` : '/menu';
+    const findUsPath = `${basePath}#find-us`;
+
+    const locationName = isMalaStrana ? 'Malá Strana' : isVinohrady ? 'Vinohrady' : '';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +29,14 @@ export function Navbar() {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const handleFindUsClick = (e: React.MouseEvent<HTMLAnchorElement>, onClose?: () => void) => {
+        if (pathname === basePath || pathname === `${basePath}/`) {
+            scrollToSection(e, 'find-us', onClose);
+        } else {
+            if (onClose) onClose();
+        }
+    };
 
     return (
         <>
@@ -32,7 +48,7 @@ export function Navbar() {
                 }`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
                     <Link
-                        href="/"
+                        href={basePath || '/'}
                         className="flex justify-center group gap-3"
                         onClick={() => setIsMobileMenuOpen(false)}>
                         <Image
@@ -54,14 +70,27 @@ export function Navbar() {
                     </Link>
 
                     <nav className="hidden md:flex items-center gap-8">
+                        {locationName && (
+                            <Link
+                                href="/"
+                                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1c1508] border border-[#2b2010] text-xs font-sans text-[#8a7f6a] hover:text-[#ede3ca] hover:border-[#e55628]/50 transition-all duration-200 group mr-2"
+                                title="Change location">
+                                <span className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_6px_#22c55e]"></span>
+                                {locationName}
+                                <span className="opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200 text-[#e55628]">
+                                    (Change)
+                                </span>
+                            </Link>
+                        )}
+
                         <Link
                             href={menuPath}
                             className="text-sm font-sans text-[#F5EDD8] hover:text-[#E8632A] transition-colors duration-200">
                             Menu
                         </Link>
                         <Link
-                            href="#find-us"
-                            onClick={(e) => scrollToSection(e, 'find-us')}
+                            href={findUsPath}
+                            onClick={(e) => handleFindUsClick(e)}
                             className="text-sm font-sans text-[#F5EDD8] hover:text-[#E8632A] transition-colors duration-200">
                             Find Us
                         </Link>
@@ -102,6 +131,19 @@ export function Navbar() {
                     isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
                 }`}>
                 <div className="flex flex-col items-center justify-center h-full gap-8">
+                    {locationName && (
+                        <Link
+                            href="/"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="flex items-center gap-2 text-[#8a7f6a] mb-4">
+                            <span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_6px_#22c55e]"></span>
+                            {locationName}{' '}
+                            <span className="text-[#e55628] underline decoration-[#e55628]/30 underline-offset-4 ml-1">
+                                Change location
+                            </span>
+                        </Link>
+                    )}
+
                     <Link
                         href={menuPath}
                         className="text-2xl font-serif text-[#F5EDD8] hover:text-[#E8632A] transition-colors"
@@ -109,8 +151,8 @@ export function Navbar() {
                         Menu
                     </Link>
                     <Link
-                        href="#find-us"
-                        onClick={(e) => scrollToSection(e, 'find-us', () => setIsMobileMenuOpen(false))}
+                        href={findUsPath}
+                        onClick={(e) => handleFindUsClick(e, () => setIsMobileMenuOpen(false))}
                         className="text-2xl font-serif text-[#F5EDD8] hover:text-[#E8632A] transition-colors">
                         Find Us
                     </Link>

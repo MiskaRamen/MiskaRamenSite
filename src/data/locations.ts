@@ -22,10 +22,8 @@ const checkMalaStranaOpen = () => {
     const { time, day } = getPragueDateTime();
 
     if (day === 'Mon') {
-        // Понеділок: 11:00 - 20:30
         return time >= '11:00' && time <= '20:30';
     } else {
-        // Вівторок - Неділя: 11:00 - 21:30
         return time >= '11:00' && time <= '21:30';
     }
 };

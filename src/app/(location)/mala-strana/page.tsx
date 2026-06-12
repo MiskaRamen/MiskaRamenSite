@@ -5,7 +5,7 @@ export default function MalaStrana() {
     const malaStranaLocation = LOCATIONS.find((loc) => loc.id === 'mala-strana');
     return (
         <>
-            <Hero address={malaStranaLocation?.address || ''} />
+            <Hero address={malaStranaLocation?.address || ''} isOpen={malaStranaLocation?.isOpen || false} />
             <Bestsellers />
             <Atmosphere />
             <FindUs

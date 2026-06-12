@@ -27,17 +27,17 @@ export default function LocationPicker() {
                         <Link
                             key={loc.id}
                             href={`/${loc.id}`}
-                            className="group relative flex flex-col bg-[#1c1508] border border-[#2b2010] rounded-[24px] overflow-hidden 
+                            className="group relative flex flex-col bg-[#1c1508] border border-[#2b2010] rounded-3xl overflow-hidden 
                                      transition-all duration-300 ease-out 
                                      hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(229,86,40,0.08)] 
                                      hover:border-[#e55628]/40 focus-visible:outline-2 focus-visible:outline-[#e55628]">
                             {/* Верхня частина з картинкою */}
-                            <div className="h-[220px] sm:h-[280px] w-full relative bg-[#120f08] overflow-hidden">
+                            <div className="h-55 sm:h-70 w-full relative bg-[#120f08] overflow-hidden">
                                 <div
                                     className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105 ${loc.imageBg} opacity-50 group-hover:opacity-70`}
                                 />
                                 {/* Градієнт для плавного переходу до нижньої частини */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#1c1508] via-[#1c1508]/20 to-transparent" />
+                                <div className="absolute inset-0 bg-linear-to-t from-[#1c1508] via-[#1c1508]/20 to-transparent" />
 
                                 {/* Статус (Відкрито/Закрито) */}
                                 <div className="absolute top-6 left-6 flex items-center gap-2 bg-[#120f08]/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-[#2b2010]">

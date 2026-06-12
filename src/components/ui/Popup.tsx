@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Product } from '@/src/types/types';
+import { CategoryMalaStrana, CategoryVinohrady, Product } from '@/src/types/types';
 
 interface PopupProps {
-    product: Product | null;
+    product: Product<CategoryMalaStrana | CategoryVinohrady> | null;
     onClose: () => void;
 }
 

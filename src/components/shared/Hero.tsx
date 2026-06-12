@@ -7,11 +7,10 @@ import { scrollToSection } from '@/src/utils/scroll';
 
 interface HeroProps {
     address: string;
+    isOpen: boolean;
 }
 
-export function Hero({ address }: HeroProps) {
-    const isOpenNow = new Date().getHours() >= 11 && new Date().getHours() < 22; // Приклад: відкрито з 11:00 до 22:00
-
+export function Hero({ address, isOpen }: HeroProps) {
     return (
         <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0 bg-[#0d0a07]">
@@ -51,7 +50,7 @@ export function Hero({ address }: HeroProps) {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
                     </span>
                     <span>
-                        {isOpenNow ? 'Open now' : 'Closed'} &middot; {address}
+                        {isOpen ? 'Open now' : 'Closed'} &middot; {address}
                     </span>
                 </div>
 

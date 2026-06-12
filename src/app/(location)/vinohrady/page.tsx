@@ -5,7 +5,7 @@ export default function Vinohrady() {
     const vinohradyLocation = LOCATIONS.find((loc) => loc.id === 'vinohrady');
     return (
         <>
-            <Hero address={vinohradyLocation?.address || ''} />
+            <Hero address={vinohradyLocation?.address || ''} isOpen={vinohradyLocation?.isOpen || false} />
             <Bestsellers />
             <Atmosphere />
             <FindUs
