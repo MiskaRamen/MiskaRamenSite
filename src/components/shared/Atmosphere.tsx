@@ -30,7 +30,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         className="col-span-2 md:col-span-2 row-span-2 relative rounded-2xl overflow-hidden group bg-[#1a1108]">
                         <Image
-                            src="/Atmosphere/MainAtmosphere.png"
+                            src="/vinohrady/Atmosphere/MainAtmosphere.png"
                             alt="Miska Ramen Interior"
                             quality={70}
                             fill
@@ -49,7 +49,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="col-span-1 relative rounded-2xl overflow-hidden group bg-[#1a1108]">
                         <Image
-                            src="/Atmosphere/AtmosphereFood.png"
+                            src="/vinohrady/Atmosphere/AtmosphereFood.png"
                             alt="Atmosphere Detail"
                             quality={60}
                             fill
@@ -67,7 +67,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="col-span-1 relative rounded-2xl overflow-hidden group bg-[#1a1108]">
                         <Image
-                            src="/Atmosphere/AtmosphereFood2.png"
+                            src="/vinohrady/Atmosphere/AtmosphereFood2.png"
                             alt="Kitchen Detail"
                             quality={60}
                             fill
@@ -85,7 +85,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="col-span-1 relative rounded-2xl overflow-hidden bg-[#1a1108] border border-[#2E1F0F] flex flex-col items-center justify-center p-6 text-center">
                         {/* Тонкий фоновий патерн або ледь помітне фото */}
-                        <div className="absolute inset-0 bg-[url('/Atmosphere/MainAtmosphere.png')] bg-cover bg-center opacity-[0.03]" />
+                        <div className="absolute inset-0 bg-[url('/vinohrady/Atmosphere/MainAtmosphere.png')] bg-cover bg-center opacity-[0.03]" />
                         <p className="relative z-10 font-serif italic text-2xl md:text-3xl text-[#F5EDD8] leading-snug">
                             &quot;Warm, <br /> intimate,&quot;
                         </p>
@@ -102,7 +102,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.6, delay: 0.5 }}
                         className="col-span-1 relative rounded-2xl overflow-hidden group bg-[#1a1108]">
                         <Image
-                            src="/Atmosphere/AtmosphereFood3.png" // TODO: Замінити на ще одне фото інтер'єру
+                            src="/vinohrady/Atmosphere/AtmosphereFood3.png" // TODO: Замінити на ще одне фото інтер'єру
                             alt="Ramen Detail"
                             fill
                             loading="lazy"

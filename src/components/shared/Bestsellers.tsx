@@ -12,7 +12,7 @@ const dishes = [
         description:
             'Creamy pork broth, wheat ramen noodles, soy sauce, marinated roasted pork neck, whole marinated egg, nori seaweed, spring onion',
         price: '289 Kč',
-        image: '/Meals/HakataTonkotsumletemass.webp',
+        image: '/vinohrady/Meals/HakataTonkotsumletemass.webp',
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const dishes = [
         description:
             'Creamy pork broth, wheat ramen noodles, soy sauce, black sesame, chili oil, minced pork, marinated egg, mung bean sprouts, bak choy, spring onion.',
         price: '299 Kč',
-        image: '/Meals/TanTanshoulderofpork.webp',
+        image: '/vinohrady/Meals/TanTanshoulderofpork.webp',
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const dishes = [
         description:
             'Pork or vegetable broth, wheat noodles, miso paste, onion, kimchi, mung bean sprouts, perilla, bamboo',
         price: '349 Kč',
-        image: '/Meals/Kimchiramenbeef.webp',
+        image: '/vinohrady/Meals/Kimchiramenbeef.webp',
     },
 ];
 

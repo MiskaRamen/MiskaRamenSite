@@ -89,7 +89,7 @@ export function MenuComponent({ TABS, SECTIONS, products }: MenuComponentProps) 
                                           line-clamp-3 mb-4.5">
                                             {product.desc}
                                         </p>
-                                        <span className="text-[18px] font-bold text-[#cc2929]">{product.price} Kč</span>
+                                        <span className="text-[18px] font-bold text-[#E8632A]">{product.price} Kč</span>
                                     </div>
                                 </button>
                             ))}
