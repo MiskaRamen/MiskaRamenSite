@@ -15,10 +15,6 @@
     scrollbar-width: none;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* Анімація появи знизу-вгору */
 @keyframes fadeInUp {
     0% {

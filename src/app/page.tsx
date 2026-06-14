@@ -35,6 +35,7 @@ export default function LocationPicker() {
                                     alt={loc.name}
                                     fill
                                     quality={60}
+                                    loading="eager"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 opacity-50 group-hover:opacity-70"
                                 />
