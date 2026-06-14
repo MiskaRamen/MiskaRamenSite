@@ -69,4 +69,5 @@ export interface Location {
         sun: string;
     };
     directLink: string;
+    imageSrc: string;
 }
