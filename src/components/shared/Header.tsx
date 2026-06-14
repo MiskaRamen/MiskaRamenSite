@@ -22,8 +22,16 @@ export function Navbar() {
     const locationName = isMalaStrana ? 'Malá Strana' : isVinohrady ? 'Vinohrady' : '';
 
     useEffect(() => {
+        let ticking = false;
+
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
+            if (!ticking) {
+                ticking = true;
+                window.requestAnimationFrame(() => {
+                    setIsScrolled(window.scrollY > 20);
+                    ticking = false;
+                });
+            }
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });

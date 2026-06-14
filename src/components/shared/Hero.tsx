@@ -15,9 +15,9 @@ export function Hero({ address, isOpen }: HeroProps) {
         <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0 bg-[#0d0a07]">
                 <Image
-                    src="https://www.byblos.com/wp-content/uploads/Restaurant-IL-Giardino_Hotel-Byblos_Saint-Tropez-%C2%A9Stephan-Julliard-7-1600x1000.jpg"
+                    src="/hero_img.webp"
                     alt="Authentic Tonkotsu Ramen"
-                    quality={75}
+                    quality={60}
                     fill
                     priority
                     className="object-cover object-center opacity-80"
