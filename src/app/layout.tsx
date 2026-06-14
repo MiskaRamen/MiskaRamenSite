@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, DM_Sans, Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
-import { Footer, Navbar } from '@/src/components/shared';
 
 const cormorant = Cormorant_Garamond({
     subsets: ['latin'],
