@@ -1,4 +1,73 @@
-import { CategoryVinohrady, OptionItem, Product, ProductOptions } from '@/src/types/types';
+type CategoryMalaStrana =
+    | 'appetizers'
+    | 'hakata-tonkotsu'
+    | 'tan-tan-ramen'
+    | 'kimchi-ramen'
+    | 'sapporo-miso'
+    | 'gyokotsu-beef'
+    | 'tokyo-shoyu'
+    | 'wonton-men'
+    | 'seafood-ramen'
+    | 'mazemen'
+    | 'ramen-hall'
+    | 'vegan-ramen'
+    | 'curry-don'
+    | 'curry-udon'
+    | 'tofu-rolls'
+    | 'extra-sides'
+    | 'sake'
+    | 'dessert'
+    | 'nigiri-2-pcs'
+    | 'maki'
+    | 'sashimi'
+    | 'sushi-roll'
+    | 'futo-maki-10-pcs'
+    | 'sushi-set'
+    // ── нові категорії (з PDF) ──────────────────────────────
+    | 'mapo-tofu'
+    | 'draft-beer'
+    | 'bottled-beer'
+    | 'japanese-whisky'
+    | 'white-wine'
+    | 'red-wine'
+    | 'sparkling-wine'
+    | 'non-alcoholic-drinks'
+    | 'tea-and-coffee'
+    | 'lemonades'
+    | 'cocktails'
+    | 'czech-spirits';
+
+// ── Types (assumed from project context) ─────────────────────
+interface OptionItem {
+    name: string;
+    price: number;
+}
+
+interface OptionsSection {
+    title: string;
+    sub: string;
+    items: OptionItem[];
+}
+
+interface ProductOptions {
+    sections: OptionsSection[];
+}
+
+interface Product<T extends string> {
+    id: number;
+    cat: T;
+    emoji: string;
+    name: string;
+    price: number;
+    desc: string;
+    allergens: number[];
+    options: ProductOptions;
+}
+
+// ============================================================
+// OPTION ITEM POOLS
+// Prices updated to match the PDF menu exactly.
+// ============================================================
 
 // ── Extras (updated prices from PDF) ─────────────────────────
 const EXTRAS: OptionItem[] = [
@@ -168,7 +237,7 @@ const ebiFryOptions: ProductOptions = {
 
 const noOptions: ProductOptions = { sections: [] };
 
-export const products: Product<CategoryVinohrady>[] = [
+export const products: Product<CategoryMalaStrana>[] = [
     // ──────────────────────────────────────────────────────────
     // APPETIZERS  (id 1–13)
     // ──────────────────────────────────────────────────────────

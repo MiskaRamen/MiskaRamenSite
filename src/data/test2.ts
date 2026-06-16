@@ -1,4 +1,81 @@
-import { CategoryMalaStrana, OptionItem, Product, ProductOptions } from '@/src/types/types';
+// ============================================================
+// OPTION TYPES
+// ============================================================
+
+interface OptionItem {
+    name: string;
+    price: number;
+}
+
+interface OptionSection {
+    title: string;
+    sub: string;
+    items: OptionItem[];
+}
+
+interface ProductOptions {
+    sections: OptionSection[];
+}
+
+// ============================================================
+// CATEGORY TYPE
+// ============================================================
+
+type CategoryMalaStrana =
+    | 'appetizers'
+    | 'hakata-tonkotsu'
+    | 'tan-tan-ramen'
+    | 'kimchi-ramen'
+    | 'sapporo-miso'
+    | 'gyokotsu-beef'
+    | 'tokyo-shoyu'
+    | 'wonton-men'
+    | 'seafood-ramen'
+    | 'mazemen'
+    | 'vegan-ramen'
+    | 'curry-don'
+    | 'curry-udon'
+    | 'extra-sides'
+    | 'sake'
+    | 'dessert'
+    | 'nigiri-2-pcs'
+    | 'maki'
+    | 'sashimi'
+    | 'sushi-roll'
+    | 'futo-maki-10-pcs'
+    | 'sushi-set'
+    // New categories added from PDF
+    | 'mapo-tofu'
+    | 'salad-ramen'
+    | 'poke'
+    | 'draft-beer'
+    | 'bottled-beer'
+    | 'white-wine'
+    | 'red-wine'
+    | 'sparkling-wine'
+    | 'japanese-whisky'
+    | 'czech-spirits'
+    | 'non-alcoholic'
+    | 'cocktails'
+    | 'matcha-drinks'
+    | 'homemade-ice-tea'
+    | 'lemonades'
+    | 'tea-coffee';
+
+// ============================================================
+// PRODUCT TYPE
+// ============================================================
+
+interface Product<T extends string> {
+    id: number;
+    cat: T;
+    emoji: string;
+    name: string;
+    price: number;
+    desc: string;
+    allergens: number[];
+    options: ProductOptions;
+}
 
 // ============================================================
 // EXTRAS & OPTIONS CONSTANTS

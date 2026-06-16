@@ -9,11 +9,9 @@ export type CategoryMalaStrana =
     | 'wonton-men'
     | 'seafood-ramen'
     | 'mazemen'
-    | 'ramen-hall'
     | 'vegan-ramen'
     | 'curry-don'
     | 'curry-udon'
-    | 'tofu-rolls'
     | 'extra-sides'
     | 'sake'
     | 'dessert'
@@ -22,8 +20,55 @@ export type CategoryMalaStrana =
     | 'sashimi'
     | 'sushi-roll'
     | 'futo-maki-10-pcs'
-    | 'sushi-set';
-export type CategoryVinohrady = 'starters' | 'mapo-tofu' | 'ramen' | 'curry-udon' | 'curry-don' | 'dessert';
+    | 'sushi-set'
+    // New categories added from PDF
+    | 'mapo-tofu'
+    | 'salad-ramen'
+    | 'poke'
+    | 'draft-beer'
+    | 'bottled-beer'
+    | 'white-wine'
+    | 'red-wine'
+    | 'sparkling-wine'
+    | 'japanese-whisky'
+    | 'czech-spirits'
+    | 'non-alcoholic'
+    | 'cocktails'
+    | 'matcha-drinks'
+    | 'homemade-ice-tea'
+    | 'lemonades'
+    | 'tea-coffee';
+
+export type CategoryVinohrady =
+    | 'appetizers'
+    | 'hakata-tonkotsu'
+    | 'tan-tan-ramen'
+    | 'kimchi-ramen'
+    | 'sapporo-miso'
+    | 'gyokotsu-beef'
+    | 'tokyo-shoyu'
+    | 'wonton-men'
+    | 'seafood-ramen'
+    | 'mazemen'
+    | 'vegan-ramen'
+    | 'curry-don'
+    | 'curry-udon'
+    | 'extra-sides'
+    | 'sake'
+    | 'dessert'
+    // ── нові категорії (з PDF) ──────────────────────────────
+    | 'mapo-tofu'
+    | 'draft-beer'
+    | 'bottled-beer'
+    | 'japanese-whisky'
+    | 'white-wine'
+    | 'red-wine'
+    | 'sparkling-wine'
+    | 'non-alcoholic-drinks'
+    | 'tea-and-coffee'
+    | 'lemonades'
+    | 'cocktails'
+    | 'czech-spirits';
 
 export interface OptionItem {
     name: string;
@@ -40,18 +85,16 @@ export interface ProductOptions {
     sections: OptionSection[];
 }
 
-export interface Product<Cat> {
+export interface Product<T extends string> {
     id: number;
-    cat: Cat;
+    cat: T;
     emoji: string;
     name: string;
     price: number;
     desc: string;
     allergens: number[];
-    likes: number;
     options: ProductOptions;
 }
-
 export interface Location {
     id: string;
     name: string;

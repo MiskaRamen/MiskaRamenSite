@@ -42,8 +42,6 @@ export default function Popup({ product, onClose }: PopupProps) {
         setShowSticky(modalRef.current.scrollTop > 220);
     };
 
-    const likeCount = product ? product.likes + (liked ? 1 : 0) : 0;
-
     return (
         <div
             role="dialog"
@@ -116,7 +114,7 @@ export default function Popup({ product, onClose }: PopupProps) {
 
                 <div className="pt-[22px] px-6 pb-4 border-b border-[#2b2010]">
                     <h2 className="font-playfair text-[22px] font-bold text-[#ede3ca] mb-1">{product?.name}</h2>
-                    <p className="text-[16px] font-semibold text-[#cc2929] mb-3">{product?.price} Kč</p>
+                    <p className="text-[16px] font-semibold text-[#E8632A] mb-3">{product?.price} Kč</p>
                     <p className="text-[14px] text-[#8a7f6a] leading-[1.65] mb-[14px]">{product?.desc}</p>
 
                     {product && product.allergens.length > 0 && (
@@ -131,20 +129,6 @@ export default function Popup({ product, onClose }: PopupProps) {
                             <span className="text-[12px] text-[#8a7f6a]">{product.allergens.join(', ')}</span>
                         </div>
                     )}
-
-                    <button
-                        onClick={() => setLiked((v) => !v)}
-                        className={[
-                            'inline-flex items-center gap-2 px-4 py-2 border rounded-[9px]',
-                            'bg-transparent cursor-pointer text-[14px] font-[inherit]',
-                            'transition-colors duration-150',
-                            liked
-                                ? 'border-[#cc2929] text-[#cc2929]'
-                                : 'border-[#3a2e1c] text-[#8a7f6a] hover:border-[#cc2929] hover:text-[#cc2929]',
-                        ].join(' ')}>
-                        <span className="text-[16px]">{liked ? '♥' : '♡'}</span>
-                        <span>{likeCount}</span>
-                    </button>
                 </div>
 
                 {product?.options.sections
@@ -160,7 +144,7 @@ export default function Popup({ product, onClose }: PopupProps) {
                              text-[#c4b89a] border-b border-[#2b2010] last:border-b-0">
                                     <span>{item.name}</span>
                                     {item.price > 0 ? (
-                                        <span className="text-[#cc2929] font-medium">{item.price} Kč</span>
+                                        <span className="text-[#E8632A] font-medium">{item.price} Kč</span>
                                     ) : (
                                         <span className="text-[#5a5040] text-[13px]">included</span>
                                     )}
