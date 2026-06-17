@@ -9,21 +9,26 @@ export default function LocationPicker() {
 
             <div className="relative z-10 w-full max-w-5xl">
                 <div className="text-center mb-12 md:mb-16">
-                    <p className="text-[#e55628] text-[11px] tracking-[0.2em] font-bold uppercase mb-4">ラーメン</p>
-                    <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+                    <p className="text-[#e55628] css-fade-in-up text-[11px] tracking-[0.2em] font-bold uppercase mb-4">
+                        ラーメン
+                    </p>
+                    <h1
+                        className="font-playfair css-fade-in-up text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
+                        style={{ animationDelay: '100ms' }}>
                         Choose your location
                     </h1>
-                    <p className="text-[#8a7f6a] text-lg">
+                    <p className="text-[#8a7f6a] text-lg css-fade-in-up" style={{ animationDelay: '200ms' }}>
                         Select a Miska Ramen restaurant to view menu and book a table.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    {LOCATIONS.map((loc) => (
+                    {LOCATIONS.map((loc, index) => (
                         <Link
                             key={loc.id}
                             href={`/${loc.id}`}
-                            className="group relative flex flex-col bg-[#1c1508] border border-[#2b2010] rounded-3xl overflow-hidden 
+                            style={{ animationDelay: `${index * 100 + 200}ms` }}
+                            className="group css-fade-in-up relative flex flex-col bg-[#1c1508] border border-[#2b2010] rounded-3xl overflow-hidden 
                                      transition-all duration-300 ease-out 
                                      hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(229,86,40,0.08)] 
                                      hover:border-[#e55628]/40 focus-visible:outline-2 focus-visible:outline-[#e55628]">

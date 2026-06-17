@@ -47,8 +47,10 @@ export function Hero({ address, isOpen, heroPhoto }: HeroProps) {
                     className="css-fade-in-up flex items-center gap-3 text-[#F5EDD8] font-sans text-sm md:text-base mb-10 bg-[#1a1108]/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[#2E1F0F]"
                     style={{ animationDelay: '400ms' }}>
                     <span className="relative flex h-2.5 w-2.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                        <span
+                            className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isOpen ? 'bg-green-400' : 'bg-red-400'}`}></span>
+                        <span
+                            className={`relative inline-flex rounded-full h-2.5 w-2.5 ${isOpen ? 'bg-green-500' : 'bg-red-500'}`}></span>
                     </span>
                     <span>
                         {isOpen ? 'Open now' : 'Closed'} &middot; {address}

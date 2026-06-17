@@ -13,7 +13,10 @@ export function Footer() {
                         className="hover:text-[#E8632A] transition-colors">
                         Instagram
                     </a>
-                    <a href="#" className="hover:text-[#E8632A] transition-colors">
+                    <a href="/terms-of-use" className="hover:text-[#E8632A] transition-colors">
+                        Terms of Use
+                    </a>
+                    <a href="/privacy-policy" className="hover:text-[#E8632A] transition-colors">
                         Privacy Policy
                     </a>
                 </div>
