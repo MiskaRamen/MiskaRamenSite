@@ -8,14 +8,15 @@ import { scrollToSection } from '@/src/utils/scroll';
 interface HeroProps {
     address: string;
     isOpen: boolean;
+    heroPhoto: string;
 }
 
-export function Hero({ address, isOpen }: HeroProps) {
+export function Hero({ address, isOpen, heroPhoto }: HeroProps) {
     return (
         <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0 bg-[#0d0a07]">
                 <Image
-                    src="/hero_img.webp"
+                    src={heroPhoto}
                     alt="Authentic Tonkotsu Ramen"
                     quality={60}
                     fill

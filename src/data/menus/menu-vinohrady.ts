@@ -176,6 +176,7 @@ export const products: Product<CategoryVinohrady>[] = [
         id: 1,
         cat: 'appetizers',
         emoji: '🫛',
+        image: '/vinohrady/Meals/HakataTonkotsumletemass.webp',
         name: 'Edamame',
         price: 89,
         desc: 'Boiled soybeans served with coarse salt',
@@ -186,6 +187,8 @@ export const products: Product<CategoryVinohrady>[] = [
         id: 2,
         cat: 'appetizers',
         emoji: '🍄',
+        image: '/images/products/edamame.jpg',
+
         name: 'Shiitake',
         price: 95,
         desc: 'Sweet and sour pickled shiitake mushrooms in soy sauce with vinegar and ginger',
@@ -196,6 +199,8 @@ export const products: Product<CategoryVinohrady>[] = [
         id: 3,
         cat: 'appetizers',
         emoji: '🥬',
+        image: '/images/products/edamame.jpg',
+
         name: 'Kimchi',
         price: 89,
         desc: 'Homemade fermented Chinese cabbage with chili and fish sauce (mildly spicy)',

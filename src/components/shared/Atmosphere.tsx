@@ -3,7 +3,17 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-export function Atmosphere() {
+interface AtmosphereProps {
+    Photos: {
+        MainAtmoPhoto: string;
+        atmo1: string;
+        atmo2: string;
+        atmo3: string;
+        atmo4: string;
+    };
+}
+
+export function Atmosphere({ Photos }: AtmosphereProps) {
     return (
         <section className="py-24 bg-[#0d0a07] w-full relative z-10 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +35,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         className="col-span-2 md:col-span-2 row-span-2 relative rounded-2xl overflow-hidden group bg-[#1a1108]">
                         <Image
-                            src="/vinohrady/Atmosphere/MainAtmosphere.png"
+                            src={Photos.MainAtmoPhoto}
                             alt="Miska Ramen Interior"
                             quality={70}
                             fill
@@ -43,7 +53,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="col-span-1 relative rounded-2xl overflow-hidden group bg-[#1a1108]">
                         <Image
-                            src="/vinohrady/Atmosphere/AtmosphereFood.png"
+                            src={Photos.atmo1}
                             alt="Atmosphere Detail"
                             quality={60}
                             fill
@@ -60,7 +70,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="col-span-1 relative rounded-2xl overflow-hidden group bg-[#1a1108]">
                         <Image
-                            src="/vinohrady/Atmosphere/AtmosphereFood2.png"
+                            src={Photos.atmo2}
                             alt="Kitchen Detail"
                             quality={60}
                             fill
@@ -78,7 +88,7 @@ export function Atmosphere() {
                         className="col-span-1 relative rounded-2xl overflow-hidden bg-[#1a1108] border border-[#2E1F0F] flex flex-col items-center justify-center p-6 text-center">
                         <div className="absolute inset-0 pointer-events-none">
                             <Image
-                                src="/vinohrady/Atmosphere/MainAtmosphere.png"
+                                src={Photos.atmo4}
                                 alt=""
                                 fill
                                 quality={30}
@@ -102,7 +112,7 @@ export function Atmosphere() {
                         transition={{ duration: 0.6, delay: 0.5 }}
                         className="col-span-1 relative rounded-2xl overflow-hidden group bg-[#1a1108]">
                         <Image
-                            src="/vinohrady/Atmosphere/AtmosphereFood3.png" // TODO: Замінити на ще одне фото інтер'єру
+                            src={Photos.atmo3}
                             alt="Ramen Detail"
                             fill
                             loading="lazy"

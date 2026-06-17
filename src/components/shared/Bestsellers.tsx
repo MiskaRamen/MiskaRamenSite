@@ -1,40 +1,28 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import Popup from '@/src/components/ui/Popup';
+import { CategoryMalaStrana, CategoryVinohrady, Product } from '@/src/types/types';
 
-const dishes = [
-    {
-        id: 1,
-        name: 'Hakata Tonkotsu mlete mass',
-        description:
-            'Creamy pork broth, wheat ramen noodles, soy sauce, marinated roasted pork neck, whole marinated egg, nori seaweed, spring onion',
-        price: '289 Kč',
-        image: '/vinohrady/Meals/HakataTonkotsumletemass.webp',
-    },
-    {
-        id: 2,
-        name: 'Tan Tan shoulder of pork',
-        description:
-            'Creamy pork broth, wheat ramen noodles, soy sauce, black sesame, chili oil, minced pork, marinated egg, mung bean sprouts, bak choy, spring onion.',
-        price: '299 Kč',
-        image: '/vinohrady/Meals/TanTanshoulderofpork.webp',
-    },
-    {
-        id: 3,
-        name: 'Kimchi ramen beef',
-        description:
-            'Pork or vegetable broth, wheat noodles, miso paste, onion, kimchi, mung bean sprouts, perilla, bamboo',
-        price: '349 Kč',
-        image: '/vinohrady/Meals/Kimchiramenbeef.webp',
-    },
-];
+// Розширюємо твій базовий тип Product, додаючи картинку для секції бестселерів
+export interface BestsellerProduct extends Product<CategoryMalaStrana | CategoryVinohrady> {
+    image?: string;
+}
 
-export function Bestsellers() {
+interface BestsellersProps {
+    dishes: BestsellerProduct[];
+}
+
+export function Bestsellers({ dishes }: BestsellersProps) {
     const pathname = usePathname();
     const menuPath = `${pathname}/menu`;
+
+    // Стейт для керування попапом
+    const [selectedDish, setSelectedDish] = useState<BestsellerProduct | null>(null);
 
     return (
         <section id="menu" className="py-24 bg-[#0d0a07] w-full relative z-10">
@@ -69,6 +57,7 @@ export function Bestsellers() {
                     </motion.div>
                 </div>
 
+                {/* Картки страв */}
                 <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory pb-8 md:pb-0 hide-scrollbar w-[calc(100%+2rem)] -ml-4 px-4 md:w-full md:ml-0 md:px-0">
                     {dishes.map((dish, i) => (
                         <motion.div
@@ -77,10 +66,11 @@ export function Bestsellers() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.6, delay: i * 0.15, ease: 'easeOut' }}
+                            onClick={() => setSelectedDish(dish)} // Відкриваємо попап при кліці
                             className="min-w-[85vw] sm:min-w-[320px] md:min-w-0 snap-center group relative flex items-stretch flex-col bg-[#1a1108] border border-[#2E1F0F] rounded-xl overflow-hidden cursor-pointer h-auto ">
                             <div className="relative w-full aspect-4/3 overflow-hidden bg-black">
                                 <Image
-                                    src={dish.image}
+                                    src={dish.image || '/images/placeholder.jpg'}
                                     alt={dish.name}
                                     quality={60}
                                     priority={i === 0}
@@ -96,13 +86,15 @@ export function Bestsellers() {
                                     <h3 className="text-[#F5EDD8] font-sans font-bold text-xl md:text-2xl mb-3 line-clamp-2 min-h-14 md:min-h-16">
                                         {dish.name}
                                     </h3>
+                                    {/* Використовуємо dish.desc замість description */}
                                     <p className="text-[#A69B8F] font-sans text-sm md:text-base line-clamp-3 leading-relaxed">
-                                        {dish.description}
+                                        {dish.desc}
                                     </p>
                                 </div>
                                 <div className="mt-6 flex justify-between items-end">
+                                    {/* Додаємо "Kč", оскільки price тепер просто число */}
                                     <p className="text-[#E8632A] font-sans font-bold text-lg md:text-xl">
-                                        {dish.price}
+                                        {dish.price} Kč
                                     </p>
                                 </div>
                             </div>
@@ -120,6 +112,9 @@ export function Bestsellers() {
                     </Link>
                 </div>
             </div>
+
+            {/* Рендеримо Popup (він сам керує своєю видимістю завдяки CSS-класам на основі переданого product) */}
+            <Popup product={selectedDish} onClose={() => setSelectedDish(null)} />
         </section>
     );
 }

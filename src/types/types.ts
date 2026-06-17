@@ -89,6 +89,7 @@ export interface Product<T extends string> {
     id: number;
     cat: T;
     emoji: string;
+    image?: string;
     name: string;
     price: number;
     desc: string;

@@ -26,13 +26,9 @@ export const SECTIONS: { cat: CategoryMalaStrana; eyebrow: string; title: string
     { cat: 'futo-maki-10-pcs', eyebrow: '太巻き', title: 'Futo Maki' },
     { cat: 'sushi-set', eyebrow: '寿司セット', title: 'Sushi Set' },
     { cat: 'dessert', eyebrow: 'デザート', title: 'Desserts' },
-
-    // ── Нові категорії їжі ──────────────────────────────
     { cat: 'mapo-tofu', eyebrow: '麻婆豆腐', title: 'Mapo Tofu' },
     { cat: 'salad-ramen', eyebrow: 'ラーメンサラダ', title: 'Salad Ramen' },
     { cat: 'poke', eyebrow: 'ポケ', title: 'Poke' },
-
-    // ── Напої та алкоголь ──────────────────────────────
     { cat: 'draft-beer', eyebrow: '生ビール', title: 'Draft Beer' },
     { cat: 'bottled-beer', eyebrow: '瓶ビール', title: 'Bottled Beer' },
     { cat: 'sake', eyebrow: '日本酒', title: 'Sake' },
@@ -72,13 +68,9 @@ export const TABS: { label: string; value: Filter }[] = [
     { label: 'Futo Maki', value: 'futo-maki-10-pcs' },
     { label: 'Sushi Set', value: 'sushi-set' },
     { label: 'Desserts', value: 'dessert' },
-
-    // ── Нові таби їжі ──────────────────────────────
     { label: 'Mapo Tofu', value: 'mapo-tofu' },
     { label: 'Salad Ramen', value: 'salad-ramen' },
     { label: 'Poke', value: 'poke' },
-
-    // ── Напої та алкоголь ──────────────────────────────
     { label: 'Draft Beer', value: 'draft-beer' },
     { label: 'Bottled Beer', value: 'bottled-beer' },
     { label: 'Sake', value: 'sake' },
