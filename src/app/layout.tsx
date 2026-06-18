@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://miska-ramen-site-frontend.vercel.app'),
+    metadataBase: new URL('https://www.miskaramen.com'),
     title: {
         default: 'Miska Ramen | Authentic Tonkotsu in Prague',
         template: '%s | Miska Ramen',
@@ -52,13 +52,13 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://miska-ramen-site-frontend.vercel.app',
+        url: 'https://www.miskaramen.com',
         title: 'Miska Ramen | Authentic Tonkotsu in Prague',
         description: 'Authentic Tokyo-style ramen bar in Prague 2, Vinohrady. Book your table today.',
         siteName: 'Miska Ramen',
         images: [
             {
-                url: '/Atmosphere/MainAtmosphere.png',
+                url: '/vinohrady/vinohrady_indoor.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Authentic Tonkotsu Ramen at Miska',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Miska Ramen | Authentic Tonkotsu in Prague',
         description: 'Authentic Tokyo-style ramen bar in Prague 2, Vinohrady.',
-        images: ['/Atmosphere/MainAtmosphere.png'],
+        images: ['/vinohrady/vinohrady_indoor.jpg'],
     },
 
     robots: {

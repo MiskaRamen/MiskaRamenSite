@@ -50,7 +50,7 @@ export default function Popup({ product, onClose }: PopupProps) {
                 if (e.target === e.currentTarget) onClose();
             }}
             className={[
-                'fixed inset-0 bg-black/80 backdrop-blur-sm z-[100]',
+                'fixed inset-0 bg-black/80 backdrop-blur-sm z-1000',
                 'flex items-center justify-center p-4 sm:p-6',
                 'transition-all duration-300 ease-out',
                 product ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none delay-100',
