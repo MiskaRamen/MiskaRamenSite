@@ -100,9 +100,6 @@ export function Atmosphere({ Photos }: AtmosphereProps) {
                         <p className="relative z-10 font-serif italic text-2xl md:text-3xl text-[#F5EDD8] leading-snug">
                             &quot;Warm, <br /> intimate,&quot;
                         </p>
-                        <span className="relative z-10 text-[#E8632A] font-sans font-bold text-sm tracking-widest uppercase mt-4 block">
-                            88 seats
-                        </span>
                     </motion.div>
 
                     <motion.div

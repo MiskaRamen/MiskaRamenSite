@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image'; // Додано імпорт Image
 import { CategoryMalaStrana, CategoryVinohrady, Product } from '@/src/types/types';
 
 interface PopupProps {
@@ -77,9 +78,15 @@ export default function Popup({ product, onClose }: PopupProps) {
                             ? 'opacity-100 translate-y-0 pointer-events-auto shadow-md'
                             : 'opacity-0 -translate-y-full pointer-events-none',
                     ].join(' ')}>
-                    <div className="w-10 h-10 rounded-full grid place-items-center text-[22px] shrink-0 bg-gradient-to-br from-[#2b2010] to-[#120f08] border border-[#3a2e1c] shadow-inner">
-                        <span className="drop-shadow-md">{product?.emoji}</span>
+                    {/* Мініатюра в хедері */}
+                    <div className="w-10 h-10 rounded-full relative overflow-hidden shrink-0 bg-[#2b2010] border border-[#3a2e1c] shadow-inner grid place-items-center">
+                        {product?.image ? (
+                            <Image src={product.image} alt={product.name} fill className="object-cover" sizes="40px" />
+                        ) : (
+                            <span className="text-[20px] drop-shadow-xs">{product?.emoji}</span>
+                        )}
                     </div>
+
                     <span className="flex-1 text-[16px] font-bold text-[#F5EDD8] truncate">{product?.name}</span>
                     <button
                         onClick={onClose}
@@ -101,18 +108,36 @@ export default function Popup({ product, onClose }: PopupProps) {
                     ✕
                 </button>
 
-                {/* Hero секція з емодзі та свіченням */}
-                <div className="relative h-[280px] flex items-center justify-center overflow-hidden rounded-t-[24px] bg-[#1a1309]">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,99,42,0.12)_0%,transparent_65%)]" />
-                    <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                {/* Hero секція з фотографією */}
+                <div className="relative h-[280px] flex items-center justify-center overflow-hidden  bg-[#120f08]">
+                    {product?.image ? (
+                        <>
+                            <Image
+                                src={product.image}
+                                alt={product.name}
+                                fill
+                                priority
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 480px"
+                            />
+                            {/* Градієнт для плавного переходу фотографії в темний фон опису */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#1c1508ab] via-transparent to-transparent opacity-95" />
+                        </>
+                    ) : (
+                        // Fallback (показуємо емодзі, якщо фото немає)
+                        <>
+                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,99,42,0.12)_0%,transparent_65%)]" />
+                            <span className="relative z-10 text-[140px] block leading-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-default">
+                                {product?.emoji}
+                            </span>
+                        </>
+                    )}
 
-                    <span className="relative z-10 text-[140px] block leading-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform duration-500 cursor-default">
-                        {product?.emoji}
-                    </span>
+                    <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                 </div>
 
                 {/* Основний опис */}
-                <div className="pt-6 px-6 sm:px-8 pb-5">
+                <div className="relative pt-6 px-6 sm:px-8 pb-5 z-10">
                     <div className="flex flex-col gap-1.5 mb-4">
                         <h2 className="font-serif text-[28px] leading-tight font-bold text-[#F5EDD8]">
                             {product?.name}
@@ -125,7 +150,7 @@ export default function Popup({ product, onClose }: PopupProps) {
 
                     <p className="text-[15px] text-[#A69B8F] leading-relaxed mb-6">{product?.desc}</p>
 
-                    {product && product.allergens.length > 0 && (
+                    {product && product.allergens && product.allergens.length > 0 && (
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#E8632A]/10 border border-[#E8632A]/20 rounded-full mb-2">
                             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E8632A] text-white text-[10px] font-bold shadow-sm">
                                 AL
@@ -138,39 +163,40 @@ export default function Popup({ product, onClose }: PopupProps) {
                 </div>
 
                 {/* Опції */}
-                {product?.options.sections
-                    .filter((sec) => sec.items.length > 0)
-                    .map((sec, i) => (
-                        <div
-                            key={i}
-                            className="px-6 sm:px-8 py-6 border-t border-[#3a2e1c]/40 bg-gradient-to-b from-[#1a140b]/50 to-transparent">
-                            <div className="mb-4">
-                                <h3 className="text-[17px] font-bold text-[#F5EDD8] mb-0.5">{sec.title}</h3>
-                                <p className="text-[13px] text-[#8a7f6a]">{sec.sub}</p>
-                            </div>
+                {product?.options?.sections &&
+                    product.options.sections
+                        .filter((sec) => sec.items.length > 0)
+                        .map((sec, i) => (
+                            <div
+                                key={i}
+                                className="px-6 sm:px-8 py-6 border-t border-[#3a2e1c]/40 bg-gradient-to-b from-[#1a140b]/50 to-transparent">
+                                <div className="mb-4">
+                                    <h3 className="text-[17px] font-bold text-[#F5EDD8] mb-0.5">{sec.title}</h3>
+                                    <p className="text-[13px] text-[#8a7f6a]">{sec.sub}</p>
+                                </div>
 
-                            <div className="space-y-1">
-                                {sec.items.map((item, j) => (
-                                    <div
-                                        key={j}
-                                        className="group flex items-center justify-between py-2.5 px-3 -mx-3 rounded-xl hover:bg-white/[0.03] transition-colors duration-200 cursor-default">
-                                        <span className="text-[15px] text-[#D4C8B5] group-hover:text-[#F5EDD8] transition-colors">
-                                            {item.name}
-                                        </span>
-                                        {item.price > 0 ? (
-                                            <span className="text-[#E8632A] font-semibold tracking-wide">
-                                                + {item.price} Kč
+                                <div className="space-y-1">
+                                    {sec.items.map((item, j) => (
+                                        <div
+                                            key={j}
+                                            className="group flex items-center justify-between py-2.5 px-3 -mx-3 rounded-xl hover:bg-white/[0.03] transition-colors duration-200 cursor-default">
+                                            <span className="text-[15px] text-[#D4C8B5] group-hover:text-[#F5EDD8] transition-colors">
+                                                {item.name}
                                             </span>
-                                        ) : (
-                                            <span className="text-[#8a7f6a] group-hover:text-[#A69B8F] text-[11px] font-bold uppercase tracking-wider transition-colors">
-                                                Included
-                                            </span>
-                                        )}
-                                    </div>
-                                ))}
+                                            {item.price > 0 ? (
+                                                <span className="text-[#E8632A] font-semibold tracking-wide">
+                                                    + {item.price} Kč
+                                                </span>
+                                            ) : (
+                                                <span className="text-[#8a7f6a] group-hover:text-[#A69B8F] text-[11px] font-bold uppercase tracking-wider transition-colors">
+                                                    Included
+                                                </span>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
             </div>
         </div>
     );

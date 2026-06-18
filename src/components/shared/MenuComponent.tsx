@@ -3,6 +3,7 @@
 import { Product, CategoryMalaStrana, CategoryVinohrady } from '@/src/types/types';
 import Popup from '@/src/components/ui/Popup';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface MenuComponentProps {
     TABS: { label: string; value: 'all' | CategoryMalaStrana | CategoryVinohrady }[];
@@ -72,31 +73,35 @@ export function MenuComponent({ TABS, SECTIONS, products }: MenuComponentProps) 
                                     aria-label={`View ${product.name}`}
                                     style={{ animationDelay: `${i * 120}ms` }}
                                     className="bg-[#1c1508] rounded-[14px] overflow-hidden cursor-pointer
-                                            border border-[#2b2010] flex flex-col text-left appearance-none
-                                            p-0 w-full transition-all duration-300 ease-out
-                                            hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(0,0,0,0.5)]
-                                            focus-visible:outline-2 focus-visible:outline-[#e55628]
-                                            focus-visible:outline-offset-2 css-fade-in-up">
-                                    <div
-                                        className="h-65 flex items-center justify-center text-[100px]
-                                       select-none shrink-0"
-                                        style={{
-                                            background: 'radial-gradient(ellipse at 50% 60%, #f0e8d5 0%, #e4dac8 100%)',
-                                        }}>
-                                        <span className="block leading-none drop-shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
-                                            {product.emoji}
-                                        </span>
+            border border-[#2b2010] flex flex-col text-left appearance-none
+            p-0 w-full transition-all duration-300 ease-out
+            hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(0,0,0,0.5)]
+            focus-visible:outline-2 focus-visible:outline-[#e55628]
+            focus-visible:outline-offset-2 css-fade-in-up">
+                                    {/* Оновлений контейнер для фото */}
+                                    <div className="relative w-full h-[260px] shrink-0 bg-[#120f08]">
+                                        <Image
+                                            fill
+                                            loading="lazy"
+                                            alt={product.name}
+                                            src={
+                                                product.image ||
+                                                'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/CKOGArF-ebupuxu-ZCnKFIQ.webp'
+                                            }
+                                            className="object-cover"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        />
                                     </div>
 
                                     <div className="pt-5.5 px-5.5 pb-6.5 flex-1 flex flex-col">
                                         <h3
                                             className="font-playfair text-[20px] font-bold text-[#ede3ca]
-                                           leading-tight mb-2.5">
+           leading-tight mb-2.5">
                                             {product.name}
                                         </h3>
                                         <p
                                             className="text-[13px] text-[#8a7f6a] leading-[1.65] flex-1
-                                          line-clamp-3 mb-4.5">
+          line-clamp-3 mb-4.5">
                                             {product.desc}
                                         </p>
                                         <span className="text-[18px] font-bold text-[#E8632A]">{product.price} Kč</span>
