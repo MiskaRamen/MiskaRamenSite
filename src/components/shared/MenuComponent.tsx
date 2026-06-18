@@ -79,7 +79,7 @@ export function MenuComponent({ TABS, SECTIONS, products }: MenuComponentProps) 
             focus-visible:outline-2 focus-visible:outline-[#e55628]
             focus-visible:outline-offset-2 css-fade-in-up">
                                     {/* Оновлений контейнер для фото */}
-                                    <div className="relative w-full h-[260px] shrink-0 bg-[#120f08]">
+                                    <div className="relative w-full h-[260px] shrink-0 bg-white">
                                         <Image
                                             fill
                                             loading="lazy"

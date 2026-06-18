@@ -210,7 +210,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 4,
         cat: 'appetizers',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/HBooAZa-TbejDnl-FnwLGOb.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781815028/719812998_1813528069612783_8369397924761640886_n_mkztzq.png',
         emoji: '🥟',
         name: 'Gyoza 5 pcs',
         price: 155,
@@ -221,7 +221,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 5,
         cat: 'appetizers',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/QnQIgCi-pWTqVND-ICcoeDa.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/a_-90/v1781815364/721994979_1407067354588091_4335460321582144382_n_xqbpaf.jpg',
         emoji: '🥟',
         name: 'Gyoza Fried 5 pcs',
         price: 155,
@@ -650,7 +650,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 56,
         cat: 'vegan-ramen',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/oxHuwYX-iYkYpFM-DjFmLBC.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781817782/723330744_1312183977747898_3249690003944033741_n_kgr5wr.png',
         emoji: '🌱',
         name: 'Vegan Sapporo Miso Ramen',
         price: 288,
@@ -803,7 +803,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 71,
         cat: 'curry-don',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/vDekOpE-UUAeeCe-FCibPJk.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/c_crop,ar_3:4/v1781815948/721733458_971085382367286_1561839934742810759_n_bnmn5m.jpg',
         emoji: '🍚',
         name: 'Pork Katsu Curry Don',
         price: 319,

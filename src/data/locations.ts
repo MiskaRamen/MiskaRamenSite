@@ -36,7 +36,7 @@ const LOCATIONS: Location[] = [
         imageBg: 'bg-[url("/vinohrady/Atmosphere/MainAtmosphere.png")]',
         isOpen: getPragueDateTime().time >= '11:00' && getPragueDateTime().time <= '22:00',
         phone: '+420 776 357 984',
-        imageSrc: '/vinohrady/Atmosphere/MainAtmosphere.png',
+        imageSrc: '/vinohrady/vinohrady_outdoor.jpg',
         workingHours: {
             mon: '11:00 - 22:00',
             tue: '11:00 - 22:00',
@@ -56,7 +56,7 @@ const LOCATIONS: Location[] = [
         imageBg: 'bg-[url("/images/mala-strana-bg.jpg")]',
         isOpen: checkMalaStranaOpen(),
         phone: '+420 608 605 185',
-        imageSrc: '/vinohrady/Atmosphere/MainAtmosphere.png',
+        imageSrc: '/mala-strana/mala-strana_outdoor.jpg',
         workingHours: {
             mon: '11:00 - 20:30',
             tue: '11:00 - 21:30',

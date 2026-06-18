@@ -64,49 +64,53 @@ const APPETIZER_EXTRAS_CHICKEN_SKEWER: OptionItem[] = [{ name: 'Extra 1 pc', pri
 
 // Ramen protein options
 const RAMEN_PROTEINS_HAKATA: OptionItem[] = [
-    { name: 'Pork neck', price: 289 },
-    { name: 'Pork belly', price: 299 },
-    { name: 'Chicken', price: 289 },
-    { name: 'Beef', price: 329 },
-    { name: 'Ground meat', price: 289 },
+    { name: 'Pork neck', price: 10 },
+    { name: 'Pork belly', price: 10 },
+    { name: 'Chicken', price: 0 },
+    { name: 'Beef', price: 40 },
+    { name: 'Ground meat', price: 0 },
 ];
 
 const RAMEN_PROTEINS_KIMCHI: OptionItem[] = [
-    { name: 'Pork belly', price: 305 },
-    { name: 'Chicken', price: 299 },
-    { name: 'Beef', price: 339 },
-    { name: 'Pork neck', price: 299 },
-    { name: 'Pork neck and pork belly', price: 315 },
+    { name: 'Pork belly', price: 6 },
+    { name: 'Chicken', price: 0 },
+    { name: 'Beef', price: 40 },
+    { name: 'Pork neck', price: 0 },
+    { name: 'Pork neck and pork belly', price: 16 },
 ];
 
+// Базова ціна Sapporo Miso: 299
 const RAMEN_PROTEINS_SAPPORO: OptionItem[] = [
-    { name: 'Pork belly', price: 305 },
-    { name: 'Chicken', price: 299 },
-    { name: 'Beef', price: 339 },
-    { name: 'Pork neck', price: 299 },
-    { name: 'Ground meat', price: 299 },
+    { name: 'Pork belly', price: 6 }, // 305 - 299
+    { name: 'Chicken', price: 0 }, // 299 - 299
+    { name: 'Beef', price: 40 }, // 339 - 299
+    { name: 'Pork neck', price: 0 }, // 299 - 299
+    { name: 'Ground meat', price: 0 }, // 299 - 299
 ];
 
+// Базова ціна Gyokotsu Beef: 319
 const RAMEN_PROTEINS_GYOKOTSU: OptionItem[] = [
-    { name: 'Pork neck', price: 319 },
-    { name: 'Pork belly', price: 329 },
-    { name: 'Chicken', price: 319 },
-    { name: 'Beef', price: 349 },
-    { name: 'Ground meat', price: 319 },
+    { name: 'Pork neck', price: 0 }, // 319 - 319
+    { name: 'Pork belly', price: 10 }, // 329 - 319
+    { name: 'Chicken', price: 0 }, // 319 - 319
+    { name: 'Beef', price: 30 }, // 349 - 319
+    { name: 'Ground meat', price: 0 }, // 319 - 319
 ];
 
+// Базова ціна Wonton Men: 349
 const RAMEN_PROTEINS_WONTON: OptionItem[] = [
-    { name: 'Pork neck', price: 349 },
-    { name: 'Pork belly', price: 358 },
-    { name: 'Chicken', price: 349 },
-    { name: 'Beef', price: 379 },
-    { name: 'Ground meat', price: 349 },
+    { name: 'Pork neck', price: 0 }, // 349 - 349
+    { name: 'Pork belly', price: 9 }, // 358 - 349
+    { name: 'Chicken', price: 0 }, // 349 - 349
+    { name: 'Beef', price: 30 }, // 379 - 349
+    { name: 'Ground meat', price: 0 }, // 349 - 349
 ];
 
+// Базова ціна Mazemen: 289
 const RAMEN_PROTEINS_MAZEMEN: OptionItem[] = [
-    { name: 'Beef', price: 319 },
-    { name: 'Chicken', price: 289 },
-    { name: 'Ground meat', price: 289 },
+    { name: 'Beef', price: 30 }, // 319 - 289
+    { name: 'Chicken', price: 0 }, // 289 - 289
+    { name: 'Ground meat', price: 0 }, // 289 - 289
 ];
 
 // Ramen options with protein selection
@@ -286,12 +290,12 @@ export const products: Product<CategoryMalaStrana>[] = [
     {
         id: 4,
         cat: 'appetizers',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781815028/719812998_1813528069612783_8369397924761640886_n_mkztzq.png',
         emoji: '🥟',
-        name: 'Gyoza 5 pcs / extra 1 pc 28,-',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/plsFIxQ-cbMnbJD-UNRukIu.webp',
+        name: 'Gyoza 5 pcs',
         price: 155,
         desc: 'Japanese boiled dumplings with pork and Chinese cabbage or vegan with soy beans, peas and carrots',
-        allergens: [1, 6],
+        allergens: [],
         options: {
             sections: [{ title: 'Extra pieces', sub: 'Add extra gyoza', items: APPETIZER_EXTRAS_GYOZA }],
         },
@@ -299,12 +303,12 @@ export const products: Product<CategoryMalaStrana>[] = [
     {
         id: 5,
         cat: 'appetizers',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/a_-90/v1781815364/721994979_1407067354588091_4335460321582144382_n_xqbpaf.jpg',
         emoji: '🥟',
-        name: 'Gyoza Fried 5 pcs / extra 1 pc 28,-',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/kCaQpvR-heTJlLZ-kBGOZRW.webp',
+        name: 'Gyoza Fried 5 pcs',
         price: 155,
         desc: 'Japanese fried dumplings with pork and Chinese cabbage or vegan with soy beans, peas and carrots',
-        allergens: [1, 6],
+        allergens: [],
         options: {
             sections: [{ title: 'Extra pieces', sub: 'Add extra gyoza', items: APPETIZER_EXTRAS_GYOZA }],
         },
@@ -399,6 +403,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         cat: 'appetizers',
         emoji: '🍢',
         name: 'Chicken Skewers 3 pcs / extra 1 pc 20,-',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/a_-90/v1781815959/721410597_1007912441995264_636029318083520622_n_yabqnf.jpg',
         price: 109,
         desc: 'Fried chicken, salad',
         allergens: [1],
@@ -412,19 +417,63 @@ export const products: Product<CategoryMalaStrana>[] = [
     {
         id: 14,
         cat: 'hakata-tonkotsu',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/xhrNQkI-avsFCHJ-lroQagE.webp',
         emoji: '🍜',
-        name: 'Hakata Tonkotsu',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/FpNeUua-cVIMJQN-lIqaDSs.webp',
+        name: 'Hakata Tonkotsu – Pork Neck',
         price: 289,
-        desc: 'Creamy pork broth, wheat ramen noodles, dashi fish broth, soy sauce, whole marinated egg, bamboo shoots, mung bean sprouts, nori seaweed, green onions, black oil of garlic and sesame',
-        allergens: [1, 3, 4, 6, 11],
-        options: hakataTonkotsuOptions,
+        desc: 'Creamy pork broth, wheat ramen noodles, dashi fish broth, soy sauce, marinated egg, bamboo shoots, mung bean sprouts, nori seaweed, green onions, black garlic oil, sesame',
+        allergens: [],
+        options: ramenOptions,
+    },
+    {
+        id: 15,
+        cat: 'hakata-tonkotsu',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/SJNMCFI-DLglUbw-tyGmQKN.webp',
+        emoji: '🍜',
+        name: 'Hakata Tonkotsu – Pork Belly',
+        price: 299,
+        desc: 'Creamy pork broth, wheat ramen noodles, dashi fish broth, soy sauce, marinated egg, bamboo shoots, mung bean sprouts, nori seaweed, green onions, black garlic oil, sesame',
+        allergens: [],
+        options: ramenOptions,
+    },
+    {
+        id: 16,
+        cat: 'hakata-tonkotsu',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/kiGrjeD-WtzKsPz-GjyGhCx.webp',
+        emoji: '🍜',
+        name: 'Hakata Tonkotsu – Chicken',
+        price: 289,
+        desc: 'Creamy pork broth, wheat ramen noodles, dashi fish broth, soy sauce, marinated egg, bamboo shoots, mung bean sprouts, nori seaweed, green onions, black garlic oil, sesame',
+        allergens: [],
+        options: ramenOptions,
+    },
+    {
+        id: 17,
+        cat: 'hakata-tonkotsu',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/mvDdqsk-JYfPSaZ-GerHBQc.webp',
+        emoji: '🍜',
+        name: 'Hakata Tonkotsu – Beef',
+        price: 329,
+        desc: 'Creamy pork broth, wheat ramen noodles, dashi fish broth, soy sauce, marinated egg, bamboo shoots, mung bean sprouts, nori seaweed, green onions, black garlic oil, sesame',
+        allergens: [],
+        options: ramenOptions,
+    },
+    {
+        id: 18,
+        cat: 'hakata-tonkotsu',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/mvDdqsk-JYfPSaZ-GerHBQc.webp',
+        emoji: '🍜',
+        name: 'Hakata Tonkotsu – Ground meat',
+        price: 289,
+        desc: 'Creamy pork broth, wheat ramen noodles, dashi fish broth, soy sauce, marinated egg, bamboo shoots, mung bean sprouts, nori seaweed, green onions, black garlic oil, sesame',
+        allergens: [],
+        options: ramenOptions,
     },
 
     // ─── TAN TAN RAMEN ──────────────────────────────────────
 
     {
-        id: 15,
+        id: 19,
         cat: 'tan-tan-ramen',
         emoji: '🌶️',
         name: 'Tan Tan Ramen',
@@ -438,7 +487,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── KIMCHI RAMEN ───────────────────────────────────────
 
     {
-        id: 16,
+        id: 20,
         cat: 'kimchi-ramen',
         emoji: '🥬',
         name: 'Kimchi Ramen',
@@ -452,7 +501,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── SAPPORO MISO ───────────────────────────────────────
 
     {
-        id: 17,
+        id: 21,
         cat: 'sapporo-miso',
         emoji: '🫙',
         name: 'Sapporo Miso',
@@ -466,7 +515,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── GYOKOTSU BEEF ──────────────────────────────────────
 
     {
-        id: 18,
+        id: 22,
         cat: 'gyokotsu-beef',
         emoji: '🥩',
         name: 'Gyokotsu Beef',
@@ -480,7 +529,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── TOKYO SHOYU ────────────────────────────────────────
 
     {
-        id: 19,
+        id: 23,
         cat: 'tokyo-shoyu',
         emoji: '🍜',
         name: 'Tokyo Shoyu',
@@ -494,7 +543,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── WONTON MEN ─────────────────────────────────────────
 
     {
-        id: 20,
+        id: 24,
         cat: 'wonton-men',
         emoji: '🥟',
         name: 'Wonton Men',
@@ -508,7 +557,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── SEAFOOD RAMEN ──────────────────────────────────────
 
     {
-        id: 21,
+        id: 25,
         cat: 'seafood-ramen',
         emoji: '🦐',
         name: 'Seafood Ramen',
@@ -522,7 +571,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── MAZEMEN ────────────────────────────────────────────
 
     {
-        id: 22,
+        id: 26,
         cat: 'mazemen',
         emoji: '🥢',
         name: 'Mazemen',
@@ -536,7 +585,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── VEGAN RAMEN ────────────────────────────────────────
 
     {
-        id: 23,
+        id: 27,
         cat: 'vegan-ramen',
         emoji: '🌱',
         name: 'Vegan Tantan Ramen',
@@ -547,18 +596,18 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: veganRamenOptions,
     },
     {
-        id: 24,
+        id: 28,
         cat: 'vegan-ramen',
         emoji: '🌱',
         name: 'Vegan Sapporo Miso Ramen',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/rCVJIsk-GDGJJDy-MezxmyT.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781817782/723330744_1312183977747898_3249690003944033741_n_kgr5wr.png',
         price: 288,
         desc: 'Vegetable broth, wheat noodles, miso sauce, onions, cabbage, mung bean sprouts, wakame, corn, arugula, bamboo shoots, tofu',
         allergens: [1, 6],
         options: veganRamenOptions,
     },
     {
-        id: 25,
+        id: 29,
         cat: 'vegan-ramen',
         emoji: '🌱',
         name: 'Vegan Shoyu Ramen',
@@ -569,7 +618,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: veganRamenOptions,
     },
     {
-        id: 26,
+        id: 30,
         cat: 'vegan-ramen',
         emoji: '🌱',
         name: 'Vegan Mazemen',
@@ -580,7 +629,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: veganRamenOptions,
     },
     {
-        id: 27,
+        id: 31,
         cat: 'vegan-ramen',
         emoji: '🌱',
         name: 'Vegan Kimchi Ramen (no pure vegan)',
@@ -594,7 +643,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── CURRY UDON ─────────────────────────────────────────
 
     {
-        id: 28,
+        id: 32,
         cat: 'curry-udon',
         emoji: '🍛',
         name: 'Curry Udon with Beef',
@@ -605,18 +654,18 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 29,
+        id: 33,
         cat: 'curry-udon',
         emoji: '🍛',
         name: 'Karaage Curry Udon',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/HkYhxTJ-nJkxfIo-rrpEAPF.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781815995/720443632_1573964841138869_6480146292085371375_n_vblu8x.jpg',
         price: 318,
         desc: 'Japanese curry, potatoes, carrots, onion, egg, udon with karaage chicken',
         allergens: [1, 3],
         options: noOptions,
     },
     {
-        id: 30,
+        id: 34,
         cat: 'curry-udon',
         emoji: '🍛',
         name: 'Ebi Fry Curry Udon',
@@ -627,7 +676,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 31,
+        id: 35,
         cat: 'curry-udon',
         emoji: '🍛',
         name: 'Chicken Katsu Curry Udon',
@@ -638,7 +687,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 32,
+        id: 36,
         cat: 'curry-udon',
         emoji: '🍛',
         name: 'Tofu Curry Udon',
@@ -652,7 +701,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── CURRY DON ──────────────────────────────────────────
 
     {
-        id: 33,
+        id: 37,
         cat: 'curry-don',
         emoji: '🍛',
         name: 'Curry Don with Beef',
@@ -663,7 +712,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 34,
+        id: 38,
         cat: 'curry-don',
         emoji: '🍛',
         name: 'Karaage Curry Don',
@@ -674,7 +723,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 35,
+        id: 39,
         cat: 'curry-don',
         emoji: '🍛',
         name: 'Ebi Fry Curry Don',
@@ -685,7 +734,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 36,
+        id: 40,
         cat: 'curry-don',
         emoji: '🍛',
         name: 'Chicken Katsu Curry Don',
@@ -696,7 +745,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 37,
+        id: 41,
         cat: 'curry-don',
         emoji: '🍛',
         name: 'Tofu Curry Don',
@@ -710,7 +759,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── MAPO TOFU ──────────────────────────────────────────
 
     {
-        id: 38,
+        id: 42,
         cat: 'mapo-tofu',
         emoji: '🫕',
         name: 'Vegan Mapo Tofu, Rice',
@@ -721,7 +770,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 39,
+        id: 43,
         cat: 'mapo-tofu',
         emoji: '🫕',
         name: 'Vegan Mapo Tofu, Udon',
@@ -732,7 +781,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 40,
+        id: 44,
         cat: 'mapo-tofu',
         emoji: '🫕',
         name: 'Mapo Tofu with Ground Meat, Rice',
@@ -743,7 +792,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 41,
+        id: 45,
         cat: 'mapo-tofu',
         emoji: '🫕',
         name: 'Mapo Tofu with Ground Meat, Udon',
@@ -757,7 +806,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── SALAD RAMEN ────────────────────────────────────────
 
     {
-        id: 42,
+        id: 46,
         cat: 'salad-ramen',
         emoji: '🥗',
         name: 'Salad Ramen – Chicken',
@@ -768,7 +817,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 43,
+        id: 47,
         cat: 'salad-ramen',
         emoji: '🥗',
         name: 'Salad Ramen – Shrimp',
@@ -779,7 +828,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 44,
+        id: 48,
         cat: 'salad-ramen',
         emoji: '🥗',
         name: 'Vegan Salad Ramen',
@@ -790,7 +839,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 45,
+        id: 49,
         cat: 'salad-ramen',
         emoji: '🥗',
         name: 'Mixed Salad (Vegan)',
@@ -800,7 +849,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 46,
+        id: 50,
         cat: 'salad-ramen',
         emoji: '🐟',
         name: 'Fried Salmon with Salads',
@@ -810,7 +859,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 47,
+        id: 51,
         cat: 'salad-ramen',
         emoji: '🦐',
         name: 'Shrimp with Salads',
@@ -820,7 +869,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 48,
+        id: 52,
         cat: 'salad-ramen',
         emoji: '🐍',
         name: 'Eels with Salads',
@@ -830,7 +879,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 49,
+        id: 53,
         cat: 'salad-ramen',
         emoji: '🍗',
         name: 'Chicken with Salads',
@@ -843,7 +892,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── POKE ───────────────────────────────────────────────
 
     {
-        id: 50,
+        id: 54,
         cat: 'poke',
         emoji: '🥑',
         name: 'Poke Vegan',
@@ -853,7 +902,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 51,
+        id: 55,
         cat: 'poke',
         emoji: '🐟',
         name: 'Poke Salmon',
@@ -863,7 +912,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 52,
+        id: 56,
         cat: 'poke',
         emoji: '🐟',
         name: 'Poke Tuna',
@@ -873,7 +922,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 53,
+        id: 57,
         cat: 'poke',
         emoji: '🦐',
         name: 'Poke Shrimp',
@@ -883,7 +932,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 54,
+        id: 58,
         cat: 'poke',
         emoji: '🐍',
         name: 'Poke Eel',
@@ -893,7 +942,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 55,
+        id: 59,
         cat: 'poke',
         emoji: '🐍',
         name: 'Unagi Don',
@@ -903,7 +952,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 56,
+        id: 60,
         cat: 'poke',
         emoji: '🐟',
         name: 'Salmon Don',
@@ -916,7 +965,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── EXTRA SIDES ────────────────────────────────────────
 
     {
-        id: 57,
+        id: 61,
         cat: 'extra-sides',
         emoji: '🍳',
         name: 'Half an egg',
@@ -926,7 +975,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 58,
+        id: 62,
         cat: 'extra-sides',
         emoji: '🌶️',
         name: 'Chilli oil',
@@ -936,7 +985,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 59,
+        id: 63,
         cat: 'extra-sides',
         emoji: '🌶️',
         name: 'Extra chilli fresh',
@@ -946,7 +995,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 60,
+        id: 64,
         cat: 'extra-sides',
         emoji: '🥦',
         name: 'Vegetables',
@@ -956,7 +1005,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 61,
+        id: 65,
         cat: 'extra-sides',
         emoji: '🍚',
         name: 'Rice',
@@ -966,7 +1015,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 62,
+        id: 66,
         cat: 'extra-sides',
         emoji: '🍜',
         name: 'Ramen noodles',
@@ -976,7 +1025,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 63,
+        id: 67,
         cat: 'extra-sides',
         emoji: '🍜',
         name: 'Udon noodles',
@@ -986,7 +1035,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 64,
+        id: 68,
         cat: 'extra-sides',
         emoji: '🍜',
         name: 'Gluten-free noodles',
@@ -996,7 +1045,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 65,
+        id: 69,
         cat: 'extra-sides',
         emoji: '🫘',
         name: 'Tofu',
@@ -1006,7 +1055,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 66,
+        id: 70,
         cat: 'extra-sides',
         emoji: '🥩',
         name: 'Pork neck',
@@ -1016,7 +1065,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 67,
+        id: 71,
         cat: 'extra-sides',
         emoji: '🥓',
         name: 'Pork belly',
@@ -1026,7 +1075,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 68,
+        id: 72,
         cat: 'extra-sides',
         emoji: '🍗',
         name: 'Chicken meat',
@@ -1036,7 +1085,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 69,
+        id: 73,
         cat: 'extra-sides',
         emoji: '🥩',
         name: 'Beef slices',
@@ -1046,7 +1095,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 70,
+        id: 74,
         cat: 'extra-sides',
         emoji: '🥩',
         name: 'Beef cubes',
@@ -1056,7 +1105,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 71,
+        id: 75,
         cat: 'extra-sides',
         emoji: '🥩',
         name: 'Ground meat',
@@ -1066,7 +1115,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 72,
+        id: 76,
         cat: 'extra-sides',
         emoji: '🍗',
         name: 'Karaage',
@@ -1077,7 +1126,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 73,
+        id: 77,
         cat: 'extra-sides',
         emoji: '🍗',
         name: 'Chicken katsu',
@@ -1087,7 +1136,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 74,
+        id: 78,
         cat: 'extra-sides',
         emoji: '🥩',
         name: 'Pork katsu',
@@ -1097,7 +1146,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 75,
+        id: 79,
         cat: 'extra-sides',
         emoji: '🍥',
         name: 'Narutomaki',
@@ -1107,7 +1156,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 76,
+        id: 80,
         cat: 'extra-sides',
         emoji: '🫙',
         name: 'Sauce',
@@ -1120,7 +1169,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── DESSERTS ────────────────────────────────────────────
 
     {
-        id: 77,
+        id: 81,
         cat: 'dessert',
         emoji: '🥞',
         name: 'Dorayaki',
@@ -1131,7 +1180,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 78,
+        id: 82,
         cat: 'dessert',
         emoji: '🍡',
         name: 'Daifuku Matcha',
@@ -1142,7 +1191,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 79,
+        id: 83,
         cat: 'dessert',
         emoji: '🍈',
         name: 'Lichi',
@@ -1153,7 +1202,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 80,
+        id: 84,
         cat: 'dessert',
         emoji: '🍦',
         name: 'Matcha Ice Cream',
@@ -1166,7 +1215,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── NIGIRI (2 pcs) ─────────────────────────────────────
 
     {
-        id: 81,
+        id: 85,
         cat: 'nigiri-2-pcs',
         emoji: '🍣',
         name: 'Sake Nigiri (salmon) 2 pcs',
@@ -1177,7 +1226,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 82,
+        id: 86,
         cat: 'nigiri-2-pcs',
         emoji: '🍣',
         name: 'Maguro Nigiri (tuna) 2 pcs',
@@ -1188,7 +1237,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 83,
+        id: 87,
         cat: 'nigiri-2-pcs',
         emoji: '🍣',
         name: 'Unagi Nigiri (eel) 2 pcs',
@@ -1199,7 +1248,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 84,
+        id: 88,
         cat: 'nigiri-2-pcs',
         emoji: '🍣',
         name: 'Avocado Nigiri 2 pcs',
@@ -1210,7 +1259,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 85,
+        id: 89,
         cat: 'nigiri-2-pcs',
         emoji: '🍣',
         name: 'Ebi Nigiri (shrimp) 2 pcs',
@@ -1221,7 +1270,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 86,
+        id: 90,
         cat: 'nigiri-2-pcs',
         emoji: '🍣',
         name: 'Sushi Nigiri 8 pcs',
@@ -1235,7 +1284,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── MAKI ───────────────────────────────────────────────
 
     {
-        id: 87,
+        id: 91,
         cat: 'maki',
         emoji: '🌀',
         name: 'Avocado Maki',
@@ -1246,7 +1295,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 88,
+        id: 92,
         cat: 'maki',
         emoji: '🌀',
         name: 'Kappa Maki (cucumber)',
@@ -1257,7 +1306,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 89,
+        id: 93,
         cat: 'maki',
         emoji: '🌀',
         name: 'Oshinko Maki (radish)',
@@ -1268,7 +1317,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 90,
+        id: 94,
         cat: 'maki',
         emoji: '🌀',
         name: 'Kani Maki (crab)',
@@ -1279,7 +1328,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 91,
+        id: 95,
         cat: 'maki',
         emoji: '🌀',
         name: 'Sake Maki (salmon)',
@@ -1290,7 +1339,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 92,
+        id: 96,
         cat: 'maki',
         emoji: '🌀',
         name: 'Ebi Maki (shrimp)',
@@ -1301,7 +1350,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 93,
+        id: 97,
         cat: 'maki',
         emoji: '🌀',
         name: 'Ebiten Maki (tempura shrimp)',
@@ -1312,7 +1361,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 94,
+        id: 98,
         cat: 'maki',
         emoji: '🌀',
         name: 'Maguro Maki (tuna)',
@@ -1323,7 +1372,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 95,
+        id: 99,
         cat: 'maki',
         emoji: '🌀',
         name: 'Oilfish Tobiko Maki',
@@ -1336,7 +1385,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── SASHIMI ────────────────────────────────────────────
 
     {
-        id: 96,
+        id: 100,
         cat: 'sashimi',
         emoji: '🍣',
         name: 'Sashimi Sake 4 pcs (salmon)',
@@ -1347,7 +1396,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 97,
+        id: 101,
         cat: 'sashimi',
         emoji: '🍣',
         name: 'Sashimi Maguro 4 pcs (tuna)',
@@ -1358,7 +1407,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 98,
+        id: 102,
         cat: 'sashimi',
         emoji: '🍣',
         name: 'Sashimi Oilfish Fillet 4 pcs',
@@ -1368,7 +1417,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 99,
+        id: 103,
         cat: 'sashimi',
         emoji: '🍣',
         name: 'Sashimi Mix 8 pcs',
@@ -1379,7 +1428,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 100,
+        id: 104,
         cat: 'sashimi',
         emoji: '🍣',
         name: 'Sashimi Set 16 pcs',
@@ -1392,7 +1441,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── SUSHI ROLLS ────────────────────────────────────────
 
     {
-        id: 101,
+        id: 105,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'California Sezam',
@@ -1403,7 +1452,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 102,
+        id: 106,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Spicy Maguro Roll',
@@ -1414,7 +1463,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 103,
+        id: 107,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'California Tobiko Red',
@@ -1425,7 +1474,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 104,
+        id: 108,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Sake Roll',
@@ -1436,7 +1485,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 105,
+        id: 109,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Pink Roll',
@@ -1446,7 +1495,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 106,
+        id: 110,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Rainbow Roll',
@@ -1457,7 +1506,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 107,
+        id: 111,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Avocado Roll',
@@ -1468,7 +1517,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 108,
+        id: 112,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'French Kiss Roll',
@@ -1479,7 +1528,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 109,
+        id: 113,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Tempura Roll',
@@ -1490,7 +1539,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 110,
+        id: 114,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Fusion Mix',
@@ -1501,7 +1550,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 111,
+        id: 115,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Unagi Roll',
@@ -1512,7 +1561,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 112,
+        id: 116,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Ebimayo Roll',
@@ -1522,7 +1571,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 113,
+        id: 117,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Maguro Roll',
@@ -1533,7 +1582,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 114,
+        id: 118,
         cat: 'sushi-roll',
         emoji: '🍱',
         name: 'Miska Roll',
@@ -1546,7 +1595,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── FUTO MAKI (10 pcs) ─────────────────────────────────
 
     {
-        id: 115,
+        id: 119,
         cat: 'futo-maki-10-pcs',
         emoji: '🌀',
         name: 'Futo Maki 10 pcs',
@@ -1557,7 +1606,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 116,
+        id: 120,
         cat: 'futo-maki-10-pcs',
         emoji: '🌀',
         name: 'Fried Futo Maki 10 pcs',
@@ -1571,7 +1620,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── SUSHI SETS ─────────────────────────────────────────
 
     {
-        id: 117,
+        id: 121,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Salmon Sushi Set 18 pcs',
@@ -1582,7 +1631,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 118,
+        id: 122,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Tuna Sushi Set 18 pcs',
@@ -1593,7 +1642,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 119,
+        id: 123,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Roll Maki Set 16 pcs',
@@ -1604,7 +1653,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 120,
+        id: 124,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Vegan Sushi Set 15 pcs',
@@ -1615,7 +1664,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 121,
+        id: 125,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Gunkan Tobiko Sushi Set 4 pcs',
@@ -1626,7 +1675,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 122,
+        id: 126,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Maki Set 24 pcs',
@@ -1637,7 +1686,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 123,
+        id: 127,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Salmon Sushi Maki Set 12 pcs',
@@ -1647,7 +1696,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 124,
+        id: 128,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Tuna & Salmon Sushi Maki Set 18 pcs',
@@ -1657,7 +1706,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 125,
+        id: 129,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Miska Sushi Set 48 pcs',
@@ -1668,7 +1717,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 126,
+        id: 130,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Family Sushi Set 96 pcs',
@@ -1679,7 +1728,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 127,
+        id: 131,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Sushi Set 44 pcs',
@@ -1689,7 +1738,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 128,
+        id: 132,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Sushi Set 47 pcs',
@@ -1699,7 +1748,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 129,
+        id: 133,
         cat: 'sushi-set',
         emoji: '🍱',
         name: 'Sushi Set 65 pcs',
@@ -1712,7 +1761,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── SAKE ───────────────────────────────────────────────
 
     {
-        id: 130,
+        id: 134,
         cat: 'sake',
         emoji: '🍶',
         name: 'Shochikubai Gokai Karakuchi 0.1l',
@@ -1723,7 +1772,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 131,
+        id: 135,
         cat: 'sake',
         emoji: '🍶',
         name: 'Shochikubai Gokai Karakuchi 0.2l',
@@ -1734,7 +1783,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 132,
+        id: 136,
         cat: 'sake',
         emoji: '🍶',
         name: 'Zaku Sake Negumi 0.1l',
@@ -1744,7 +1793,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 133,
+        id: 137,
         cat: 'sake',
         emoji: '🍶',
         name: 'Zaku Sake Negumi 0.2l',
@@ -1754,7 +1803,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 134,
+        id: 138,
         cat: 'sake',
         emoji: '🍶',
         name: 'Zaku Sake Kanade 0.1l',
@@ -1764,7 +1813,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 135,
+        id: 139,
         cat: 'sake',
         emoji: '🍶',
         name: 'Zaku Sake Kanade 0.2l',
@@ -1774,7 +1823,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 136,
+        id: 140,
         cat: 'sake',
         emoji: '🍶',
         name: 'Zaku Sake Miyabi 0.1l',
@@ -1784,7 +1833,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 137,
+        id: 141,
         cat: 'sake',
         emoji: '🍶',
         name: 'Zaku Sake Miyabi 0.2l',
@@ -1797,7 +1846,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── DRAFT BEER ─────────────────────────────────────────
 
     {
-        id: 138,
+        id: 142,
         cat: 'draft-beer',
         emoji: '🍺',
         name: 'Budvar Výčepní 0.33l',
@@ -1808,7 +1857,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 139,
+        id: 143,
         cat: 'draft-beer',
         emoji: '🍺',
         name: 'Budvar Výčepní 0.5l',
@@ -1819,7 +1868,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 140,
+        id: 144,
         cat: 'draft-beer',
         emoji: '🍺',
         name: 'Budvar 33 0.33l',
@@ -1830,7 +1879,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 141,
+        id: 145,
         cat: 'draft-beer',
         emoji: '🍺',
         name: 'Budvar 33 0.5l',
@@ -1841,7 +1890,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 142,
+        id: 146,
         cat: 'draft-beer',
         emoji: '🍺',
         name: 'Budvar Dark 0.33l',
@@ -1852,7 +1901,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 143,
+        id: 147,
         cat: 'draft-beer',
         emoji: '🍺',
         name: 'Budvar Dark 0.5l',
@@ -1866,7 +1915,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── BOTTLED BEER & CIDER ────────────────────────────────
 
     {
-        id: 144,
+        id: 148,
         cat: 'bottled-beer',
         emoji: '🍺',
         name: 'Budvar Non-Alcoholic 0.33l',
@@ -1877,7 +1926,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 145,
+        id: 149,
         cat: 'bottled-beer',
         emoji: '🍺',
         name: 'Asahi Super Dry 0.33l',
@@ -1888,7 +1937,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 146,
+        id: 150,
         cat: 'bottled-beer',
         emoji: '🍺',
         name: 'Sapporo 0.33l',
@@ -1899,7 +1948,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 147,
+        id: 151,
         cat: 'bottled-beer',
         emoji: '🍺',
         name: 'Kirin Ichiban 0.33l',
@@ -1910,7 +1959,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 148,
+        id: 152,
         cat: 'bottled-beer',
         emoji: '🍺',
         name: 'Tátův Sad Dry Cider 0.33l',
@@ -1924,7 +1973,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── WHITE WINE ─────────────────────────────────────────
 
     {
-        id: 149,
+        id: 153,
         cat: 'white-wine',
         emoji: '🥂',
         name: 'White Wine 0.1l',
@@ -1935,7 +1984,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 150,
+        id: 154,
         cat: 'white-wine',
         emoji: '🥂',
         name: 'White Wine 0.2l',
@@ -1946,7 +1995,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 151,
+        id: 155,
         cat: 'white-wine',
         emoji: '🥂',
         name: 'White Wine with Soda 0.2l',
@@ -1957,7 +2006,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 152,
+        id: 156,
         cat: 'white-wine',
         emoji: '🥂',
         name: 'White Wine Bottle 0.75l',
@@ -1968,7 +2017,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 153,
+        id: 157,
         cat: 'white-wine',
         emoji: '🥂',
         name: 'Cotes-du-Rhone France 0.75l',
@@ -1979,7 +2028,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 154,
+        id: 158,
         cat: 'white-wine',
         emoji: '🥂',
         name: 'Luna Argenta Italy 0.75l',
@@ -1990,7 +2039,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 155,
+        id: 159,
         cat: 'white-wine',
         emoji: '🥂',
         name: 'Borgo alla Terra Italy 0.75l',
@@ -2004,7 +2053,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── RED WINE ───────────────────────────────────────────
 
     {
-        id: 156,
+        id: 160,
         cat: 'red-wine',
         emoji: '🍷',
         name: 'Red Wine 0.1l',
@@ -2015,7 +2064,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 157,
+        id: 161,
         cat: 'red-wine',
         emoji: '🍷',
         name: 'Red Wine 0.2l',
@@ -2026,7 +2075,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 158,
+        id: 162,
         cat: 'red-wine',
         emoji: '🍷',
         name: 'Red Wine Bottle 0.75l',
@@ -2037,7 +2086,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 159,
+        id: 163,
         cat: 'red-wine',
         emoji: '🍷',
         name: 'Primitivo di Manduria Italy 0.75l',
@@ -2048,7 +2097,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 160,
+        id: 164,
         cat: 'red-wine',
         emoji: '🍷',
         name: 'Primitivo 365 D.O.P. Italy 0.75l',
@@ -2059,7 +2108,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 161,
+        id: 165,
         cat: 'red-wine',
         emoji: '🍷',
         name: 'Saga Bordeaux LAFITE France 0.75l',
@@ -2070,7 +2119,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 162,
+        id: 166,
         cat: 'red-wine',
         emoji: '🍷',
         name: 'Chateau Rozier France 0.75l',
@@ -2081,7 +2130,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 163,
+        id: 167,
         cat: 'red-wine',
         emoji: '🍷',
         name: 'Bernard Magrez France 0.75l',
@@ -2095,7 +2144,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── SPARKLING WINE ─────────────────────────────────────
 
     {
-        id: 164,
+        id: 168,
         cat: 'sparkling-wine',
         emoji: '🥂',
         name: 'Mionetto Prosecco Italy 0.75l',
@@ -2106,7 +2155,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 165,
+        id: 169,
         cat: 'sparkling-wine',
         emoji: '🥂',
         name: 'Voga Rosé Prosecco Italy 0.75l',
@@ -2117,7 +2166,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 166,
+        id: 170,
         cat: 'sparkling-wine',
         emoji: '🥂',
         name: 'G.H.Mumm Champagne France 0.75l',
@@ -2128,7 +2177,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 167,
+        id: 171,
         cat: 'sparkling-wine',
         emoji: '🥂',
         name: 'Freixenet Asti DOCG Italy 0.75l',
@@ -2142,7 +2191,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── JAPANESE WHISKY ────────────────────────────────────
 
     {
-        id: 168,
+        id: 172,
         cat: 'japanese-whisky',
         emoji: '🥃',
         name: 'Akashi 0.04l',
@@ -2153,7 +2202,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 169,
+        id: 173,
         cat: 'japanese-whisky',
         emoji: '🥃',
         name: 'Nobushi 0.04l',
@@ -2164,7 +2213,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 170,
+        id: 174,
         cat: 'japanese-whisky',
         emoji: '🥃',
         name: 'The Barrel 0.04l',
@@ -2175,7 +2224,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 171,
+        id: 175,
         cat: 'japanese-whisky',
         emoji: '🥃',
         name: 'The Chita 0.04l',
@@ -2186,7 +2235,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 172,
+        id: 176,
         cat: 'japanese-whisky',
         emoji: '🥃',
         name: 'Toki Whisky 0.04l',
@@ -2197,7 +2246,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 173,
+        id: 177,
         cat: 'japanese-whisky',
         emoji: '🥃',
         name: 'Hibiki 0.04l',
@@ -2211,7 +2260,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── CZECH SPIRITS ──────────────────────────────────────
 
     {
-        id: 174,
+        id: 178,
         cat: 'czech-spirits',
         emoji: '🥃',
         name: 'Žufánek Pear Brandy 0.04l',
@@ -2222,7 +2271,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 175,
+        id: 179,
         cat: 'czech-spirits',
         emoji: '🥃',
         name: 'Žufánek Apricot Brandy 0.04l',
@@ -2236,7 +2285,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── NON-ALCOHOLIC ──────────────────────────────────────
 
     {
-        id: 176,
+        id: 180,
         cat: 'non-alcoholic',
         emoji: '💧',
         name: 'Römerquelle Still Water 0.33l',
@@ -2247,7 +2296,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 177,
+        id: 181,
         cat: 'non-alcoholic',
         emoji: '💧',
         name: 'Römerquelle Sparkling Water 0.33l',
@@ -2258,7 +2307,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 178,
+        id: 182,
         cat: 'non-alcoholic',
         emoji: '💧',
         name: 'Römerquelle Still Water 0.75l',
@@ -2269,7 +2318,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 179,
+        id: 183,
         cat: 'non-alcoholic',
         emoji: '💧',
         name: 'Römerquelle Sparkling Water 0.75l',
@@ -2280,7 +2329,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 180,
+        id: 184,
         cat: 'non-alcoholic',
         emoji: '💧',
         name: 'Bottle of Tap Water 0.5l',
@@ -2291,7 +2340,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 181,
+        id: 185,
         cat: 'non-alcoholic',
         emoji: '💧',
         name: 'Bottle of Tap Water 1l',
@@ -2302,7 +2351,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 182,
+        id: 186,
         cat: 'non-alcoholic',
         emoji: '🥤',
         name: 'Coca Cola 0.33l',
@@ -2313,7 +2362,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 183,
+        id: 187,
         cat: 'non-alcoholic',
         emoji: '🥤',
         name: 'Cola Zero 0.33l',
@@ -2324,7 +2373,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 184,
+        id: 188,
         cat: 'non-alcoholic',
         emoji: '🥤',
         name: 'Fanta 0.33l',
@@ -2335,7 +2384,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 185,
+        id: 189,
         cat: 'non-alcoholic',
         emoji: '🥤',
         name: 'Sprite 0.33l',
@@ -2346,7 +2395,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 186,
+        id: 190,
         cat: 'non-alcoholic',
         emoji: '🫧',
         name: 'Ramune Strawberry 0.25l',
@@ -2357,7 +2406,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 187,
+        id: 191,
         cat: 'non-alcoholic',
         emoji: '🫧',
         name: 'Ramune Melon 0.25l',
@@ -2368,7 +2417,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 188,
+        id: 192,
         cat: 'non-alcoholic',
         emoji: '🫧',
         name: 'Ramune Blueberry 0.25l',
@@ -2382,7 +2431,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── COCKTAILS ──────────────────────────────────────────
 
     {
-        id: 189,
+        id: 193,
         cat: 'cocktails',
         emoji: '🍹',
         name: 'Aperol Spritz 0.3l',
@@ -2393,7 +2442,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 190,
+        id: 194,
         cat: 'cocktails',
         emoji: '🍹',
         name: 'Mojito 0.3l',
@@ -2403,7 +2452,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 191,
+        id: 195,
         cat: 'cocktails',
         emoji: '🍹',
         name: 'Virgin Mojito 0.3l',
@@ -2413,7 +2462,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 192,
+        id: 196,
         cat: 'cocktails',
         emoji: '🍹',
         name: 'Cuba Libre 0.3l',
@@ -2426,7 +2475,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── MATCHA DRINKS ──────────────────────────────────────
 
     {
-        id: 193,
+        id: 197,
         cat: 'matcha-drinks',
         emoji: '🍵',
         name: 'Matcha Strawberry 0.3l',
@@ -2436,7 +2485,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 194,
+        id: 198,
         cat: 'matcha-drinks',
         emoji: '🍵',
         name: 'Matcha Mango 0.3l',
@@ -2446,7 +2495,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 195,
+        id: 199,
         cat: 'matcha-drinks',
         emoji: '🍵',
         name: 'Matcha Ice Latte 0.3l',
@@ -2459,7 +2508,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── HOMEMADE ICE TEA ───────────────────────────────────
 
     {
-        id: 196,
+        id: 200,
         cat: 'homemade-ice-tea',
         emoji: '🧊',
         name: 'Ice Tea Yuzu 0.4l',
@@ -2469,7 +2518,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 197,
+        id: 201,
         cat: 'homemade-ice-tea',
         emoji: '🧊',
         name: 'Ice Tea Peach 0.4l',
@@ -2479,7 +2528,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 198,
+        id: 202,
         cat: 'homemade-ice-tea',
         emoji: '🧊',
         name: 'Ice Tea Elderberry 0.4l',
@@ -2492,7 +2541,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── LEMONADES ──────────────────────────────────────────
 
     {
-        id: 199,
+        id: 203,
         cat: 'lemonades',
         emoji: '🍋',
         name: 'Lemonade Raspberry 0.4l',
@@ -2503,7 +2552,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 200,
+        id: 204,
         cat: 'lemonades',
         emoji: '🍋',
         name: 'Lemonade Ginger 0.4l',
@@ -2514,7 +2563,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 201,
+        id: 205,
         cat: 'lemonades',
         emoji: '🍋',
         name: 'Lemonade Lichi 0.4l',
@@ -2525,7 +2574,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 202,
+        id: 206,
         cat: 'lemonades',
         emoji: '🍋',
         name: 'Lemonade Kiwi & Pineapple 0.4l',
@@ -2536,7 +2585,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 203,
+        id: 207,
         cat: 'lemonades',
         emoji: '🍋',
         name: 'Lemonade Mango & Maracuja 0.4l',
@@ -2547,7 +2596,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 204,
+        id: 208,
         cat: 'lemonades',
         emoji: '🍋',
         name: 'Lemonade Cucumber 0.4l',
@@ -2561,7 +2610,7 @@ export const products: Product<CategoryMalaStrana>[] = [
     // ─── TEA & COFFEE ───────────────────────────────────────
 
     {
-        id: 205,
+        id: 209,
         cat: 'tea-coffee',
         emoji: '🍵',
         name: 'Sencha Green Tea 0.3l',
@@ -2572,7 +2621,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 206,
+        id: 210,
         cat: 'tea-coffee',
         emoji: '🍵',
         name: 'Black Tea 0.3l',
@@ -2583,7 +2632,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 207,
+        id: 211,
         cat: 'tea-coffee',
         emoji: '🍵',
         name: 'Fruit Tea 0.3l',
@@ -2594,7 +2643,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 208,
+        id: 212,
         cat: 'tea-coffee',
         emoji: '🍵',
         name: 'Genmaicha Tea with Rice 0.3l',
@@ -2605,7 +2654,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 209,
+        id: 213,
         cat: 'tea-coffee',
         emoji: '☕',
         name: 'Espresso',
@@ -2616,7 +2665,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 210,
+        id: 214,
         cat: 'tea-coffee',
         emoji: '☕',
         name: 'Espresso Macchiato',
@@ -2627,7 +2676,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 211,
+        id: 215,
         cat: 'tea-coffee',
         emoji: '☕',
         name: 'Double Espresso',
@@ -2638,7 +2687,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 212,
+        id: 216,
         cat: 'tea-coffee',
         emoji: '☕',
         name: 'Cappuccino',
@@ -2649,7 +2698,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 213,
+        id: 217,
         cat: 'tea-coffee',
         emoji: '☕',
         name: 'Flat White',
@@ -2660,7 +2709,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 214,
+        id: 218,
         cat: 'tea-coffee',
         emoji: '☕',
         name: 'Caffé Latté',
@@ -2671,7 +2720,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         options: noOptions,
     },
     {
-        id: 215,
+        id: 219,
         cat: 'tea-coffee',
         emoji: '☕',
         name: 'Caffé Lungo',

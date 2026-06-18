@@ -3,7 +3,13 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
     images: {
         formats: ['image/avif', 'image/webp'],
-        domains: ['cdn-media.choiceqr.com'],
+        domains: ['cdn-media.choiceqr.com', 'https://res.cloudinary.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'res.cloudinary.com',
+            },
+        ],
         qualities: [30, 60, 70, 75, 100],
     },
 };
