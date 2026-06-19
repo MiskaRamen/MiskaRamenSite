@@ -941,7 +941,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 110,
         cat: 'draft-beer',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/ypKTmRO-toggxGe-DTHWQYV.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781903732/unnamed_lofavl.jpg',
         emoji: '🍺',
         name: 'Únětická 10,7° draft 0.33l',
         price: 55,
@@ -952,7 +952,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 111,
         cat: 'draft-beer',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/RAOTIih-oDEjTeg-clIvwzB.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781903732/unnamed_lofavl.jpg',
         emoji: '🍺',
         name: 'Únětická 10,7° draft 0.5l',
         price: 69,
