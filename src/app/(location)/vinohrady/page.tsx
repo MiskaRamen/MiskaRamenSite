@@ -8,11 +8,7 @@ export default function Vinohrady() {
     const vihohradyPhotosPath = imagesPath.find((loc) => loc.id === 'vinohrady');
     return (
         <>
-            <Hero
-                address={vinohradyLocation?.address || ''}
-                isOpen={vinohradyLocation?.isOpen || false}
-                heroPhoto={vihohradyPhotosPath?.inDoorImg || ''}
-            />
+            <Hero address={vinohradyLocation?.address || ''} heroPhoto={vihohradyPhotosPath?.inDoorImg || ''} />
             <Bestsellers dishes={[products[0], products[1], products[2]]} />
             <Atmosphere
                 Photos={{

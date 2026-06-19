@@ -5,14 +5,15 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { scrollToSection } from '@/src/utils/scroll';
 import { usePathname } from 'next/navigation';
+import { checkIsLocationOpen } from '@/src/data/locations';
+import { useEffect, useState } from 'react';
 
 interface HeroProps {
     address: string;
-    isOpen: boolean;
     heroPhoto: string;
 }
 
-export function Hero({ address, isOpen, heroPhoto }: HeroProps) {
+export function Hero({ address, heroPhoto }: HeroProps) {
     const pathname = usePathname();
 
     const isMalaStrana = pathname.includes('/mala-strana');
@@ -20,6 +21,26 @@ export function Hero({ address, isOpen, heroPhoto }: HeroProps) {
 
     const basePath = isMalaStrana ? '/mala-strana' : isVinohrady ? '/vinohrady' : '';
     const bookPath = `${basePath}/book`;
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        const locationId = isMalaStrana ? 'mala-strana' : isVinohrady ? 'vinohrady' : '';
+
+        const updateStatus = () => {
+            setIsMounted(true);
+
+            if (locationId) {
+                setIsOpen(checkIsLocationOpen(locationId));
+            }
+        };
+
+        updateStatus();
+
+        const interval = setInterval(updateStatus, 60000);
+        return () => clearInterval(interval);
+    }, [isMalaStrana, isVinohrady]);
 
     return (
         <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">

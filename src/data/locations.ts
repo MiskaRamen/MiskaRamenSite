@@ -1,6 +1,6 @@
 import type { Location } from '../types/types';
 
-const getPragueDateTime = () => {
+export const getPragueDateTime = () => {
     const now = new Date();
 
     const time = now.toLocaleTimeString('en-GB', {
@@ -18,23 +18,31 @@ const getPragueDateTime = () => {
     return { time, day };
 };
 
-const checkMalaStranaOpen = () => {
+export const checkIsLocationOpen = (id: string): boolean => {
     const { time, day } = getPragueDateTime();
 
-    if (day === 'Mon') {
-        return time >= '11:00' && time <= '20:30';
-    } else {
-        return time >= '11:00' && time <= '21:30';
+    if (id === 'vinohrady') {
+        return time >= '11:00' && time <= '22:00';
     }
+
+    if (id === 'mala-strana') {
+        if (day === 'Mon') {
+            return time >= '11:00' && time <= '20:30';
+        } else {
+            return time >= '11:00' && time <= '21:30';
+        }
+    }
+
+    return false;
 };
 
-const LOCATIONS: Location[] = [
+// Зверни увагу: поле isOpen ми прибрали звідси
+const LOCATIONS: Omit<Location, 'isOpen'>[] = [
     {
         id: 'vinohrady',
         name: 'Vinohrady',
         address: 'Španělská 2, 120 00 Praha 2',
         imageBg: 'bg-[url("/vinohrady/Atmosphere/MainAtmosphere.png")]',
-        isOpen: getPragueDateTime().time >= '11:00' && getPragueDateTime().time <= '22:00',
         phone: '+420 776 357 984',
         imageSrc: '/vinohrady/vinohrady_outdoor.jpg',
         workingHours: {
@@ -54,7 +62,6 @@ const LOCATIONS: Location[] = [
         name: 'Malá Strana',
         address: 'Míšeňská 70/4, 118 00 Malá Strana',
         imageBg: 'bg-[url("/images/mala-strana-bg.jpg")]',
-        isOpen: checkMalaStranaOpen(),
         phone: '+420 608 605 185',
         imageSrc: '/mala-strana/mala-strana_outdoor.jpg',
         workingHours: {
