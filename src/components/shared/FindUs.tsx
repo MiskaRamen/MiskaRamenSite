@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface FindUsProps {
     address: string;
@@ -19,6 +21,14 @@ interface FindUsProps {
 
 export function FindUs({ address, phone, directLink, workingHours }: FindUsProps) {
     const splitAddress = address.split(',').map((part) => part.trim());
+
+    const pathname = usePathname();
+
+    const isMalaStrana = pathname.includes('/mala-strana');
+    const isVinohrady = pathname.includes('/vinohrady');
+
+    const basePath = isMalaStrana ? '/mala-strana' : isVinohrady ? '/vinohrady' : '';
+    const bookPath = `${basePath}/book`;
 
     return (
         <>
@@ -115,14 +125,14 @@ export function FindUs({ address, phone, directLink, workingHours }: FindUsProps
 
                             {/* Кнопка бронювання */}
                             <div className="mt-10">
-                                <a
-                                    href="#book"
+                                <Link
+                                    href={bookPath}
                                     className="inline-flex items-center justify-center px-8 py-4 bg-[#E8632A] hover:bg-[#FF7A3D] text-[#F5EDD8] font-sans font-bold text-lg rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(232,99,42,0.5)] w-full sm:w-auto group">
                                     Book a Table
                                     <span className="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform">
                                         &rarr;
                                     </span>
-                                </a>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>

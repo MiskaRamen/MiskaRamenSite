@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { scrollToSection } from '@/src/utils/scroll';
+import { usePathname } from 'next/navigation';
 
 interface HeroProps {
     address: string;
@@ -12,6 +13,14 @@ interface HeroProps {
 }
 
 export function Hero({ address, isOpen, heroPhoto }: HeroProps) {
+    const pathname = usePathname();
+
+    const isMalaStrana = pathname.includes('/mala-strana');
+    const isVinohrady = pathname.includes('/vinohrady');
+
+    const basePath = isMalaStrana ? '/mala-strana' : isVinohrady ? '/vinohrady' : '';
+    const bookPath = `${basePath}/book`;
+
     return (
         <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0 bg-[#0d0a07]">
@@ -62,7 +71,7 @@ export function Hero({ address, isOpen, heroPhoto }: HeroProps) {
                     className="css-fade-in-up flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
                     style={{ animationDelay: '600ms' }}>
                     <Link
-                        href="#book"
+                        href={bookPath}
                         className="w-full sm:w-auto px-8 py-4 bg-[#E8632A] hover:bg-[#FF7A3D] text-[#F5EDD8] font-sans font-bold text-lg rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(232,99,42,0.5)] flex justify-center items-center gap-2 group">
                         Book a Table
                         <span className="transform translate-x-0 group-hover:translate-x-1 transition-transform">

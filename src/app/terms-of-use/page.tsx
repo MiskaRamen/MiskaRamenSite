@@ -42,12 +42,12 @@ export default function TermsOfUsePage() {
                     <span
                         onClick={router.back}
                         className="inline-flex items-center gap-2 text-[#b9ad99] hover:text-[#e55628] transition-colors text-[15px] font-medium">
-                        <span aria-hidden>←</span> Zpět na hlavní stránku
+                        <span aria-hidden>←</span> Back
                     </span>
                     <Link
                         href="/privacy-policy"
                         className="inline-flex items-center gap-2 text-[#b9ad99] hover:text-[#e55628] transition-colors text-[15px] font-medium">
-                        Ochrana osobních údajů <span aria-hidden>→</span>
+                        Privacy Policy <span aria-hidden>→</span>
                     </Link>
                 </div>
                 <div className="mb-14 md:mb-20">
@@ -616,12 +616,12 @@ export default function TermsOfUsePage() {
                     <span
                         onClick={router.back}
                         className="inline-flex items-center gap-2 text-[#b9ad99] hover:text-[#e55628] transition-colors text-[15px] font-medium">
-                        <span aria-hidden>←</span> Zpět na hlavní stránku
+                        <span aria-hidden>←</span> Back
                     </span>
                     <Link
                         href="/privacy-policy"
                         className="inline-flex items-center gap-2 text-[#b9ad99] hover:text-[#e55628] transition-colors text-[15px] font-medium">
-                        Ochrana osobních údajů <span aria-hidden>→</span>
+                        Privacy Policy <span aria-hidden>→</span>
                     </Link>
                 </div>
             </div>

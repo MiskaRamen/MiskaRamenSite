@@ -18,6 +18,7 @@ export function Navbar() {
     const basePath = isMalaStrana ? '/mala-strana' : isVinohrady ? '/vinohrady' : '';
     const menuPath = basePath ? `${basePath}/menu` : '/menu';
     const findUsPath = `${basePath}#find-us`;
+    const bookPath = `${basePath}/book`;
 
     const locationName = isMalaStrana ? 'Malá Strana' : isVinohrady ? 'Vinohrady' : '';
 
@@ -102,14 +103,16 @@ export function Navbar() {
                             className="text-sm font-sans text-[#F5EDD8] hover:text-[#E8632A] transition-colors duration-200">
                             Find Us
                         </Link>
-                        <button className="bg-[#E8632A] hover:bg-[#FF7A3D] text-[#F5EDD8] text-sm font-sans font-medium px-5 py-2.5 rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(232,99,42,0.4)] flex items-center gap-2">
+                        <Link
+                            href={bookPath}
+                            className="bg-[#E8632A] hover:bg-[#FF7A3D] text-[#F5EDD8] text-sm font-sans font-medium px-5 py-2.5 rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(232,99,42,0.4)] flex items-center gap-2">
                             Book a Table
                             <span
                                 aria-hidden="true"
                                 className="transform translate-x-0 group-hover:translate-x-1 transition-transform">
                                 &rarr;
                             </span>
-                        </button>
+                        </Link>
                     </nav>
 
                     <button
@@ -164,11 +167,12 @@ export function Navbar() {
                         className="text-2xl font-serif text-[#F5EDD8] hover:text-[#E8632A] transition-colors">
                         Find Us
                     </Link>
-                    <button
+                    <Link
                         className="bg-[#E8632A] text-[#F5EDD8] text-lg font-sans font-medium px-8 py-3 rounded mt-4"
-                        onClick={() => setIsMobileMenuOpen(false)}>
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        href={bookPath}>
                         Book a Table &rarr;
-                    </button>
+                    </Link>
                 </div>
             </div>
         </>

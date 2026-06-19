@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
                 <span
                     onClick={router.back}
                     className="inline-flex items-center gap-2 my-8 text-[#b9ad99] hover:text-[#e55628] transition-colors text-[15px] font-medium">
-                    <span aria-hidden>←</span> Zpět na hlavní stránku
+                    <span aria-hidden>←</span> Back
                 </span>
                 <div className="mb-14 md:mb-20">
                     <p className="text-[#e55628] text-[11px] tracking-[0.2em] font-bold uppercase mb-4">プライバシー</p>
@@ -361,7 +361,7 @@ export default function PrivacyPolicyPage() {
                     <span
                         onClick={router.back}
                         className="inline-flex items-center gap-2 my-8 text-[#b9ad99] hover:text-[#e55628] transition-colors text-[15px] font-medium">
-                        <span aria-hidden>←</span> Zpět na hlavní stránku
+                        <span aria-hidden>←</span> Back
                     </span>
                 </div>
             </div>
