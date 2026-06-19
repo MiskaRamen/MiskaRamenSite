@@ -9,11 +9,7 @@ export default function MalaStrana() {
 
     return (
         <>
-            <Hero
-                address={malaStranaLocation?.address || ''}
-                isOpen={malaStranaLocation?.isOpen || false}
-                heroPhoto={malaStranaPhotosPath?.inDoorImg || ''}
-            />
+            <Hero address={malaStranaLocation?.address || ''} heroPhoto={malaStranaPhotosPath?.inDoorImg || ''} />
             <Bestsellers dishes={[products[0], products[1], products[2]]} />
             <Atmosphere
                 Photos={{
