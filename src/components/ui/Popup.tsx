@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image'; // Додано імпорт Image
+import Image from 'next/image';
 import { CategoryMalaStrana, CategoryVinohrady, Product } from '@/src/types/types';
 
 interface PopupProps {
@@ -50,7 +50,7 @@ export default function Popup({ product, onClose }: PopupProps) {
                 if (e.target === e.currentTarget) onClose();
             }}
             className={[
-                'fixed inset-0 bg-black/80 backdrop-blur-sm z-1000',
+                'fixed inset-0 bg-black/80 backdrop-blur-sm z-[1000]',
                 'flex items-center justify-center p-4 sm:p-6',
                 'transition-all duration-300 ease-out',
                 product ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none delay-100',
@@ -68,7 +68,7 @@ export default function Popup({ product, onClose }: PopupProps) {
                     '[&::-webkit-scrollbar-thumb]:rounded-full',
                     product ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-10 scale-[0.95] opacity-0',
                 ].join(' ')}>
-                {/* Липкий Хедер (Glassmorphism) */}
+                {/* Липкий Хедер */}
                 <div
                     className={[
                         'sticky top-0 z-30 bg-[#120f08]/85 backdrop-blur-xl border-b border-[#3a2e1c]/50',
@@ -78,7 +78,6 @@ export default function Popup({ product, onClose }: PopupProps) {
                             ? 'opacity-100 translate-y-0 pointer-events-auto shadow-md'
                             : 'opacity-0 -translate-y-full pointer-events-none',
                     ].join(' ')}>
-                    {/* Мініатюра в хедері */}
                     <div className="w-10 h-10 rounded-full relative overflow-hidden shrink-0 bg-[#2b2010] border border-[#3a2e1c] shadow-inner grid place-items-center">
                         {product?.image ? (
                             <Image src={product.image} alt={product.name} fill className="object-cover" sizes="40px" />
@@ -108,32 +107,34 @@ export default function Popup({ product, onClose }: PopupProps) {
                     ✕
                 </button>
 
-                {/* Hero секція з фотографією */}
-                <div className="relative h-[280px] flex items-center justify-center overflow-hidden  bg-[#120f08]">
+                {/* РОЗУМНА HERO-СЕКЦІЯ (Адаптивна висота) */}
+                <div className="relative w-full flex items-center justify-center overflow-hidden bg-[#120f08]">
                     {product?.image ? (
                         <>
                             <Image
                                 src={product.image}
                                 alt={product.name}
-                                fill
+                                /* Додаємо базові розміри для оптимізатора, але Tailwind їх перекриє */
+                                width={800}
+                                height={800}
                                 priority
-                                className="object-cover"
+                                /* Ось тут магія: ширина 100%, висота адаптивна, мінімум 280px, максимум 420px */
+                                className="w-full h-auto min-h-[280px] max-h-[500px] object-cover"
                                 sizes="(max-width: 768px) 100vw, 480px"
                             />
-                            {/* Градієнт для плавного переходу фотографії в темний фон опису */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#1c1508ab] via-transparent to-transparent opacity-95" />
+                            {/* Градієнт поверх */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#1c1508] via-[#1c1508]/10 to-transparent opacity-95 pointer-events-none" />
                         </>
                     ) : (
-                        // Fallback (показуємо емодзі, якщо фото немає)
-                        <>
+                        /* Fallback для емодзі зі статичною висотою 280px */
+                        <div className="relative w-full h-[280px] flex items-center justify-center">
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,99,42,0.12)_0%,transparent_65%)]" />
                             <span className="relative z-10 text-[140px] block leading-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-default">
                                 {product?.emoji}
                             </span>
-                        </>
+                        </div>
                     )}
-
-                    <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                    <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Основний опис */}

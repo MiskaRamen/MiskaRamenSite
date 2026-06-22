@@ -967,7 +967,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 112,
         cat: 'bottled-beer',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/UbVGylD-SSXxPjM-nFNKhEl.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968105/5b4cdff8-2e17-41a3-acc7-bf5ff8eadafa_555837012_i5lc4r.jpg',
         emoji: '🍺',
         name: 'BIRELL Non-Alcoholic 0.33l',
         price: 50,
@@ -978,7 +978,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 113,
         cat: 'bottled-beer',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/dBJXCYk-AKKMWtb-pdeKPej.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/yIeJkie-ApjDmTg-ImDMpXc.webp',
         emoji: '🍺',
         name: 'Asahi Super Dry 0.33l',
         price: 89,
@@ -989,7 +989,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 114,
         cat: 'bottled-beer',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/pQubCPb-WEUmuFL-iGOZnpY.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/hJMYmZg-PZFnCHt-GFOqnIJ.webp',
         emoji: '🍺',
         name: 'Sapporo 0.33l',
         price: 95,
@@ -1000,7 +1000,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 115,
         cat: 'bottled-beer',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/LDSCPbc-FozUadC-WCIJffw.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/wkjjuFZ-GNVJtnH-JewllIU.webp',
         emoji: '🍺',
         name: 'Kirin Ichiban 0.33l',
         price: 89,
@@ -1011,7 +1011,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 116,
         cat: 'bottled-beer',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/grgWjWN-kghHsZk-IocsikA.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/lHTtJgZ-kTOllsQ-hXFTPJB.webp',
         emoji: '🍺',
         name: 'Tátův Sad Dry Cider 0.33l',
         price: 95,
@@ -1021,12 +1021,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // JAPANESE WHISKY  (id 117–122) — NEW CATEGORY
+    // JAPANESE WHISKY  (id 117–122)
     // ──────────────────────────────────────────────────────────
     {
         id: 117,
         cat: 'japanese-whisky',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/uJMmUcl-ykglrIk-tMAydkC.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/bBsCbGx-IHiNUyI-dJXWdYj.webp',
         emoji: '🥃',
         name: 'Akashi 0.04l',
         price: 169,
@@ -1037,7 +1037,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 118,
         cat: 'japanese-whisky',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/pjvUMJI-cVIsdve-oOqMGkY.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/MlWqmMx-HoAibFG-bdLsPfr.webp',
         emoji: '🥃',
         name: 'Nobushi 0.04l',
         price: 288,
@@ -1048,7 +1048,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 119,
         cat: 'japanese-whisky',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/bXPQxAK-qceQXPp-DJCiKjv.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/lkSmyFS-kjoChJx-UfpybNI.webp',
         emoji: '🥃',
         name: 'The Barrel 0.04l',
         price: 308,
@@ -1059,7 +1059,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 120,
         cat: 'japanese-whisky',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/RIqTela-vfEkixE-zJCZPCw.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/IILdoWU-mTxlgCb-wfccQFB.webp',
         emoji: '🥃',
         name: 'The Chita 0.04l',
         price: 308,
@@ -1070,7 +1070,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 121,
         cat: 'japanese-whisky',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/DHIHYYF-EmpIGGg-GYjtgGz.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/oGFbGkJ-IVaeMtF-KUzaInw.webp',
         emoji: '🥃',
         name: 'Toki Whisky 0.04l',
         price: 288,
@@ -1081,7 +1081,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 122,
         cat: 'japanese-whisky',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/agegJWA-jxMGjgt-QXeGslI.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/CwnZqQc-ADJTiLO-dFChbHF.webp',
         emoji: '🥃',
         name: 'Hibiki 0.04l',
         price: 469,
@@ -1091,12 +1091,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // WHITE WINE  (id 123–129) — NEW CATEGORY
+    // WHITE WINE  (id 123–129)
     // ──────────────────────────────────────────────────────────
     {
         id: 123,
         cat: 'white-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/oGlkfHT-hfWCmCI-eSNnDbN.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/rsEUnGZ-AuGbDgY-itzwfRh.webp',
         emoji: '🍷',
         name: 'White Wine glass 0.1l',
         price: 66,
@@ -1107,7 +1107,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 124,
         cat: 'white-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/zJTPvDr-vjDENnL-IDlVyxl.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/kgHZyYQ-EQXTGrd-oGSDMKU.webp',
         emoji: '🍷',
         name: 'White Wine glass 0.2l',
         price: 99,
@@ -1118,7 +1118,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 125,
         cat: 'white-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/mKefCGI-vKzhqnH-cIokhEL.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968100/zonin-limoneto-spritz-6630862aa0d04-scaled_kzdjiz.jpg', // ПОВЕРНУТО З CLOUDINARY
         emoji: '🍷',
         name: 'White Wine with Soda 0.2l',
         price: 70,
@@ -1129,7 +1129,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 126,
         cat: 'white-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/xXqzNbD-LUaDHOv-MBSGXEO.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/xJJdSox-QzbseAI-gwlhEkz.webp',
         emoji: '🍷',
         name: 'White Wine bottle 0.75l',
         price: 369,
@@ -1139,12 +1139,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // RED WINE  (id 130–137) — NEW CATEGORY
+    // RED WINE  (id 130–137)
     // ──────────────────────────────────────────────────────────
     {
         id: 130,
         cat: 'red-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/JrIsjfa-paqUkFQ-IAVFbbC.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/gUlvGuW-ShsDvwG-GitCjxx.webp',
         emoji: '🍷',
         name: 'Red Wine glass 0.1l',
         price: 65,
@@ -1155,7 +1155,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 131,
         cat: 'red-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/eVSSCXm-jGvIvZl-QSBDinU.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/AbldoID-yMThDGM-wtanOok.webp',
         emoji: '🍷',
         name: 'Red Wine glass 0.2l',
         price: 99,
@@ -1166,7 +1166,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 132,
         cat: 'red-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/orJNZFD-MZkGObB-rmQyteV.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/WvJYdku-ottaEto-XYlRfeY.webp',
         emoji: '🍷',
         name: 'Red Wine bottle 0.75l',
         price: 369,
@@ -1177,7 +1177,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 135,
         cat: 'red-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/zDflBZC-pJNSDkx-nTKjPBc.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/quDjCyA-aTvmCGe-NzphhCM.webp',
         emoji: '🍷',
         name: 'Saga Bordeaux LAFITE France 0.75l',
         price: 838,
@@ -1187,12 +1187,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // SPARKLING WINE  (id 138–141) — NEW CATEGORY
+    // SPARKLING WINE  (id 138–141)
     // ──────────────────────────────────────────────────────────
     {
         id: 138,
         cat: 'sparkling-wine',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/MElHQRD-swNValh-dWekMKy.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/PJbfubY-fgRwLkH-WDXlGLJ.webp',
         emoji: '🥂',
         name: 'Mionetto Prosecco Italy 0.75l',
         price: 588,
@@ -1202,12 +1202,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // CZECH SPIRITS  (id 142–143) — NEW CATEGORY
+    // CZECH SPIRITS  (id 142–143)
     // ──────────────────────────────────────────────────────────
     {
         id: 142,
         cat: 'czech-spirits',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/xlckzee-PbaPJFU-XeXmeIX.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/IbVbFHO-DPvpnbD-QsgWIwa.webp',
         emoji: '🥃',
         name: 'Žufánek Pear Brandy 0.04l',
         price: 95,
@@ -1218,7 +1218,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 143,
         cat: 'czech-spirits',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/XstHRkQ-moBtItf-ysrRZGu.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/PAevZQz-BBeIJby-LLgExoB.webp',
         emoji: '🥃',
         name: 'Žufánek Apricot Brandy 0.04l',
         price: 95,
@@ -1228,12 +1228,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // NON-ALCOHOLIC DRINKS  (id 144–158) — NEW CATEGORY
+    // NON-ALCOHOLIC DRINKS  (id 144–158)
     // ──────────────────────────────────────────────────────────
     {
         id: 145,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/DDGmAEv-BfzEDdx-xxdVWcq.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968107/7c1f5f2a-e3c5-4436-b952-1989f1e24e3f_294384892_msa3bh.jpg',
         emoji: '💧',
         name: 'Mattoni Sparkling Water 0.33l',
         price: 59,
@@ -1244,7 +1244,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 146,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/kDIzEbk-kkZiWzv-oeeRmpa.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968107/7c1f5f2a-e3c5-4436-b952-1989f1e24e3f_294384892_msa3bh.jpg',
         emoji: '💧',
         name: 'Mattoni Sparkling Water 0.75l',
         price: 99,
@@ -1255,7 +1255,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 147,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/ySFawOw-jfwbOku-GleKxQd.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968112/8ec0b747-58f2-4fe6-b666-8c927f057610_rwo9kr.jpg',
         emoji: '💧',
         name: 'Aquila Still Water 0.75l',
         price: 99,
@@ -1266,7 +1266,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 148,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/MbYXaay-YFTyaBV-SeTOkfE.webp',
+        image: '', // Залишено пустим
         emoji: '💧',
         name: 'Bottle of Tap Water 0.3l',
         price: 30,
@@ -1277,7 +1277,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 149,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/CGUAQeP-FLlUgkd-UbKiKrw.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/NJpjMks-vyVwvMc-PlcbKqT.webp', // Залишено без змін
         emoji: '💧',
         name: 'Bottle of Tap Water 0.5l',
         price: 39,
@@ -1288,7 +1288,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 150,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/SfjbQJi-eIDJJaB-igrbhbl.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/BYAJWAU-VBKPVCn-FixFVew.webp',
         emoji: '🥤',
         name: 'Coca Cola 0.33l',
         price: 65,
@@ -1299,7 +1299,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 151,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/HatelFz-DGHyyuV-IhWYWsY.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/fykyRfs-cEqCBoM-alOUbID.webp',
         emoji: '🥤',
         name: 'Cola Zero 0.33l',
         price: 65,
@@ -1310,7 +1310,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 152,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/XNGfvCz-GlQUmXz-JYVHSbk.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/lxJYJCB-eFpHQkX-jVUgRzs.webp',
         emoji: '🥤',
         name: 'Fanta 0.33l',
         price: 65,
@@ -1321,7 +1321,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 153,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/XOGkKSr-TqJltND-zTVkAvi.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/WgvPmpk-iUFkfmi-ZwWUxCG.webp',
         emoji: '🥤',
         name: 'Sprite 0.33l',
         price: 65,
@@ -1332,7 +1332,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 154,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/DdJdegs-IdTJibe-wqNdjzS.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968101/1281_kinley-ginger-sklo-0-25l_m0hv0g.jpg',
         emoji: '🥤',
         name: 'Kinley Ginger 0.25l',
         price: 65,
@@ -1343,7 +1343,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 156,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/WGIHmFe-YIfNWcB-PFVYKjR.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/CAJHfsw-HuVQolM-ojEbuRl.webp',
         emoji: '🥤',
         name: 'Ramune Strawberry 0.25l',
         price: 95,
@@ -1354,7 +1354,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 157,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/AelmobR-qYoKJAm-usRFCMb.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/WCLDJIo-XpIYNOR-aRnEhcY.webp',
         emoji: '🥤',
         name: 'Ramune Melon 0.25l',
         price: 95,
@@ -1365,7 +1365,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 158,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/pCYDIsl-UDFpzxe-yeTFNlI.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/HbDvufe-eCVEsQC-AHmsaqM.webp',
         emoji: '🥤',
         name: 'Ramune Blueberry 0.25l',
         price: 95,
@@ -1375,12 +1375,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // TEA AND COFFEE  (id 159–167) — NEW CATEGORY
+    // TEA AND COFFEE  (id 159–167)
     // ──────────────────────────────────────────────────────────
     {
         id: 159,
         cat: 'tea-and-coffee',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/IgZEWCr-HPHeFix-VHCDklX.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/mvYDVGU-dmkUYhC-VkIpCfo.webp',
         emoji: '🍵',
         name: 'Sencha Green Tea 0.3l',
         price: 95,
@@ -1391,7 +1391,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 160,
         cat: 'tea-and-coffee',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/oPJbKJZ-FDIeVuo-hbmkJtS.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968096/921133_8_bqa4cp.jpg', // ПОВЕРНУТО З CLOUDINARY
         emoji: '🍵',
         name: 'Black Tea 0.3l',
         price: 79,
@@ -1402,7 +1402,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 161,
         cat: 'tea-and-coffee',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/aWSNhEK-ovvZItz-aiHkhRG.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968097/900550_1_deiqii.jpg', // ПОВЕРНУТО З CLOUDINARY
         emoji: '🍵',
         name: 'Fruit Tea 0.3l',
         price: 79,
@@ -1413,7 +1413,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 162,
         cat: 'tea-and-coffee',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/VTdUeIJ-tCrLKGC-cbtcYng.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/RmhlDeg-Djjlmsb-HbLfVCF.webp',
         emoji: '🍵',
         name: 'Genmaicha Tea with Rice 0.3l',
         price: 95,
@@ -1424,7 +1424,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 163,
         cat: 'tea-and-coffee',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/DrXRvWW-nbktkpH-kHSGkJs.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/slHNCNx-YbqExNF-LemAQHl.webp',
         emoji: '☕',
         name: 'Espresso',
         price: 60,
@@ -1435,7 +1435,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 165,
         cat: 'tea-and-coffee',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/KuyyQaX-IVsovQj-KxAVoNT.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/zEnvsxD-JhKUVJA-GGDQOie.webp',
         emoji: '☕',
         name: 'Cappuccino',
         price: 89,
@@ -1446,7 +1446,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 166,
         cat: 'tea-and-coffee',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/ECYlDRZ-bWXbcTJ-OvSSoZw.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/pDkBbDb-aeHjOdl-rMUiiDR.webp',
         emoji: '☕',
         name: 'Caffè Latte',
         price: 89,
@@ -1456,12 +1456,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // LEMONADES  (id 168–172) — NEW CATEGORY
+    // LEMONADES  (id 168–172)
     // ──────────────────────────────────────────────────────────
     {
         id: 168,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/DQCxIMJ-IZJseNf-gKJujvu.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/JDepKla-fQkkbKs-jFKivFM.webp',
         emoji: '🍹',
         name: 'Raspberry Lemonade 0.4l',
         price: 89,
@@ -1472,7 +1472,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 169,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/EAByayx-fOCqJZE-MbTHjUv.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/kegWVOd-kFykoBV-eSzLKki.webp',
         emoji: '🍹',
         name: 'Ginger Lemonade 0.4l',
         price: 89,
@@ -1483,7 +1483,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 170,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/dObXclT-ILTAxsm-FxeGYJB.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/gkRFaGm-EpJXYlD-nHeSgnY.webp',
         emoji: '🍹',
         name: 'Lichi Lemonade 0.4l',
         price: 89,
@@ -1494,7 +1494,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 171,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/beFomlQ-GBwOvRd-iAkJFRp.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/wXqSJSY-FACQleG-idlAFhe.webp',
         emoji: '🍹',
         name: 'Kiwi & Pineapple Lemonade 0.4l',
         price: 89,
@@ -1505,7 +1505,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 172,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/yanIYll-VeQcRdC-eulHHlF.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/gkRFaGm-EpJXYlD-nHeSgnY.webp',
         emoji: '🍹',
         name: 'Mango & Maracuja Lemonade 0.4l',
         price: 89,
@@ -1515,12 +1515,12 @@ export const products: Product<CategoryVinohrady>[] = [
     },
 
     // ──────────────────────────────────────────────────────────
-    // COCKTAILS  (id 173–175) — NEW CATEGORY
+    // COCKTAILS  (id 173–175)
     // ──────────────────────────────────────────────────────────
     {
         id: 173,
         cat: 'cocktails',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/VmRfmnI-BcKFCHU-hRjFDtj.webp',
+        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/IuEWqeD-WJKHGGb-WnskdfE.webp',
         emoji: '🍸',
         name: 'Aperol Spritz 0.4l',
         price: 165,

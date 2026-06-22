@@ -20,7 +20,6 @@ export const SECTIONS: { cat: CategoryVinohrady; eyebrow: string; title: string 
     { cat: 'curry-don', eyebrow: 'カレー丼', title: 'Curry Don' },
     { cat: 'curry-udon', eyebrow: 'カレーうどん', title: 'Curry Udon' },
     { cat: 'mapo-tofu', eyebrow: '麻婆豆腐', title: 'Mapo Tofu' },
-    { cat: 'extra-sides', eyebrow: '追加の具材', title: 'Extra Sides' },
 
     // ── Десерти ──────────────────────────
     { cat: 'dessert', eyebrow: 'デザート', title: 'Desserts' },
@@ -58,7 +57,6 @@ export const TABS: { label: string; value: Filter }[] = [
     { label: 'Curry Don', value: 'curry-don' },
     { label: 'Curry Udon', value: 'curry-udon' },
     { label: 'Mapo Tofu', value: 'mapo-tofu' },
-    { label: 'Extra Sides', value: 'extra-sides' },
 
     // ── Десерти ──────────────────────────
     { label: 'Desserts', value: 'dessert' },

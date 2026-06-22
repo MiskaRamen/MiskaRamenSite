@@ -53,7 +53,6 @@ export type CategoryVinohrady =
     | 'vegan-ramen'
     | 'curry-don'
     | 'curry-udon'
-    | 'extra-sides'
     | 'sake'
     | 'dessert'
     // ── нові категорії (з PDF) ──────────────────────────────
