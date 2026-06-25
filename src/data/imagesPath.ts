@@ -16,10 +16,10 @@ const imagesPath: IImagesPath[] = [
         outDoorImg: '/vinohrady/vinohrady_outdoor.jpg',
         inDoorImg: '/vinohrady/vinohrady_indoor.jpg',
         AtmosphereImg: {
-            atmosphere1: '/vinohrady/Atmosphere/AtmosphereFood.png',
-            atmosphere2: '/vinohrady/Atmosphere/AtmosphereFood2.png',
-            atmosphere3: '/vinohrady/Atmosphere/AtmosphereFood3.png',
-            atmosphere4: '/vinohrady/Atmosphere/Rolls.png',
+            atmosphere1: '/vinohrady/Atmosphere/vinohrady_atmo2.jpg',
+            atmosphere2: '/vinohrady/Atmosphere/vinohrady_atmo1.jpg',
+            atmosphere3: '/vinohrady/Atmosphere/vinohrady_atmo4.jpg',
+            atmosphere4: '/vinohrady/Atmosphere/vinohrady_atmo3.jpg',
         },
     },
     {

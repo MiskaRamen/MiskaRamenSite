@@ -10,7 +10,6 @@ export default function MalaStrana() {
     return (
         <>
             <Hero address={malaStranaLocation?.address || ''} heroPhoto={malaStranaPhotosPath?.inDoorImg || ''} />
-            <Bestsellers dishes={[products[0], products[1], products[2]]} />
             <Atmosphere
                 Photos={{
                     MainAtmoPhoto: malaStranaPhotosPath?.outDoorImg || '',
@@ -20,6 +19,7 @@ export default function MalaStrana() {
                     atmo4: malaStranaPhotosPath?.AtmosphereImg.atmosphere1 || '',
                 }}
             />
+            <Bestsellers dishes={[products[0], products[1], products[2]]} />
             <FindUs
                 address={malaStranaLocation?.address || ''}
                 phone={malaStranaLocation?.phone || ''}

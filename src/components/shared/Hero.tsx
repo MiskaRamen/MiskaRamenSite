@@ -117,7 +117,10 @@ export function Hero({ address, heroPhoto }: HeroProps) {
                 <motion.div
                     animate={{ y: [0, -15, 0] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
-                    <Link href="#menu" onClick={(e) => scrollToSection(e, 'menu')} aria-label="Scroll to menu">
+                    <Link
+                        href="#atmosphere"
+                        onClick={(e) => scrollToSection(e, 'atmosphere')}
+                        aria-label="Scroll to menu">
                         <svg
                             className="w-6 h-6 text-[#F5EDD8]/50 hover:text-[#E8632A] transition-colors"
                             fill="none"

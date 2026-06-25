@@ -9,7 +9,6 @@ export default function Vinohrady() {
     return (
         <>
             <Hero address={vinohradyLocation?.address || ''} heroPhoto={vihohradyPhotosPath?.inDoorImg || ''} />
-            <Bestsellers dishes={[products[0], products[1], products[2]]} />
             <Atmosphere
                 Photos={{
                     MainAtmoPhoto: vihohradyPhotosPath?.outDoorImg || '',
@@ -19,6 +18,7 @@ export default function Vinohrady() {
                     atmo4: vihohradyPhotosPath?.AtmosphereImg.atmosphere1 || '',
                 }}
             />
+            <Bestsellers dishes={[products[0], products[1], products[2]]} />
             <FindUs
                 address={vinohradyLocation?.address || ''}
                 phone={vinohradyLocation?.phone || ''}
