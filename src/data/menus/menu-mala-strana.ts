@@ -729,8 +729,8 @@ export const products: Product<CategoryMalaStrana>[] = [
         name: 'Chicken Katsu Curry Don',
         image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/ZQHQIHK-zBdeCXR-qIiFicN.webp',
         price: 319,
-        desc: 'Japanese curry, potatoes, carrots, onion, egg, rice with chicken katsu',
-        allergens: [1, 3],
+        desc: 'Japanese curry, potatoes, carrots, onion, rice with chicken katsu',
+        allergens: [1],
         options: noOptions,
     },
     {
@@ -741,7 +741,7 @@ export const products: Product<CategoryMalaStrana>[] = [
         image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/gvlHDvJ-ujwFSDD-ryfNYCy.webp',
         price: 298,
         desc: 'Japanese curry, potatoes, carrots, onion, rice with tofu',
-        allergens: [3, 6],
+        allergens: [6],
         options: noOptions,
     },
 
