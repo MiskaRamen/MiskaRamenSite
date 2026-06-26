@@ -867,7 +867,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 98,
         cat: 'sake',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/KYQFYPR-YREfSNr-OdlayTY.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782476326/Screenshot_20260626_141602_Instagram_axstqz.jpg',
         emoji: '🍶',
         name: 'Shochikubai Gokai Karakuchi 0.1l',
         price: 165,
@@ -878,7 +878,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 99,
         cat: 'sake',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramen/menu/QRDfTFt-rBJFSbP-rIuQQsy.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782476326/Screenshot_20260626_141602_Instagram_axstqz.jpg',
         emoji: '🍶',
         name: 'Shochikubai Gokai Karakuchi 0.2l',
         price: 319,
@@ -1233,7 +1233,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 145,
         cat: 'non-alcoholic-drinks',
-        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968107/7c1f5f2a-e3c5-4436-b952-1989f1e24e3f_294384892_msa3bh.jpg',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782476327/Screenshot_20260626_141553_Instagram_iae2dm.jpg',
         emoji: '💧',
         name: 'Mattoni Sparkling Water 0.33l',
         price: 59,
@@ -1244,7 +1244,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 146,
         cat: 'non-alcoholic-drinks',
-        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968107/7c1f5f2a-e3c5-4436-b952-1989f1e24e3f_294384892_msa3bh.jpg',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782476326/Screenshot_20260626_141543_Instagram_a0riau.jpg',
         emoji: '💧',
         name: 'Mattoni Sparkling Water 0.75l',
         price: 99,
@@ -1288,7 +1288,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 150,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/BYAJWAU-VBKPVCn-FixFVew.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782477825/coca-cola-bottle-png--1_ldisqp.png',
         emoji: '🥤',
         name: 'Coca Cola 0.33l',
         price: 65,
@@ -1343,7 +1343,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 156,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/CAJHfsw-HuVQolM-ojEbuRl.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782476327/Screenshot_20260626_141558_Instagram_wi76dg.jpg',
         emoji: '🥤',
         name: 'Ramune Strawberry 0.25l',
         price: 95,
@@ -1461,7 +1461,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 168,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/JDepKla-fQkkbKs-jFKivFM.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782478088/722203859_1863833437618917_260906786226667229_n_udc4jq.jpg',
         emoji: '🍹',
         name: 'Raspberry Lemonade 0.4l',
         price: 89,
@@ -1472,7 +1472,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 169,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/kegWVOd-kFykoBV-eSzLKki.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782478041/718597025_996709606450564_5405362396763238295_n_h0zsb3.jpg',
         emoji: '🍹',
         name: 'Ginger Lemonade 0.4l',
         price: 89,
@@ -1483,7 +1483,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 170,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/gkRFaGm-EpJXYlD-nHeSgnY.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782477998/723624533_1778260233616630_5923588734961299132_n_use4f1.jpg',
         emoji: '🍹',
         name: 'Lichi Lemonade 0.4l',
         price: 89,
@@ -1494,7 +1494,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 171,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/wXqSJSY-FACQleG-idlAFhe.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782477937/727124233_1544778993719164_3767381871771052863_n_th3cly.jpg',
         emoji: '🍹',
         name: 'Kiwi & Pineapple Lemonade 0.4l',
         price: 89,
@@ -1505,7 +1505,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 172,
         cat: 'lemonades',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/gkRFaGm-EpJXYlD-nHeSgnY.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782477902/726781900_1312397687695836_3460599475364847962_n_jglvb7.jpg',
         emoji: '🍹',
         name: 'Mango & Maracuja Lemonade 0.4l',
         price: 89,
