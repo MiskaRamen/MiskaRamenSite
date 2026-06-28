@@ -967,7 +967,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 112,
         cat: 'bottled-beer',
-        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968105/5b4cdff8-2e17-41a3-acc7-bf5ff8eadafa_555837012_i5lc4r.jpg',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681709/729602786_1691352328575755_5116936898663623184_n_vh96zl.png',
         emoji: '🍺',
         name: 'BIRELL Non-Alcoholic 0.33l',
         price: 50,
@@ -1000,7 +1000,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 115,
         cat: 'bottled-beer',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/wkjjuFZ-GNVJtnH-JewllIU.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681655/730294195_2078303532725702_757747764976904341_n_ajvi5p.png',
         emoji: '🍺',
         name: 'Kirin Ichiban 0.33l',
         price: 89,
@@ -1255,7 +1255,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 147,
         cat: 'non-alcoholic-drinks',
-        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1781968112/8ec0b747-58f2-4fe6-b666-8c927f057610_rwo9kr.jpg',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681651/729127856_1322763282803147_5004172225939531622_n_srbbvc.jpg',
         emoji: '💧',
         name: 'Aquila Still Water 0.75l',
         price: 99,
@@ -1266,9 +1266,9 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 148,
         cat: 'non-alcoholic-drinks',
-        image: '', // Залишено пустим
         emoji: '💧',
         name: 'Bottle of Tap Water 0.3l',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681652/729160454_3021892184683710_8181654424227226315_n_jperty.jpg',
         price: 30,
         desc: '',
         allergens: [],
@@ -1277,7 +1277,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 149,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/NJpjMks-vyVwvMc-PlcbKqT.webp', // Залишено без змін
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681651/726289496_2597729507364684_5938854476312811304_n_arcybv.jpg', // Залишено без змін
         emoji: '💧',
         name: 'Bottle of Tap Water 0.5l',
         price: 39,
@@ -1288,7 +1288,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 150,
         cat: 'non-alcoholic-drinks',
-        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782477825/coca-cola-bottle-png--1_ldisqp.png',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681653/705349515_3491358621014029_4035521622856679713_n_ln60fo.jpg',
         emoji: '🥤',
         name: 'Coca Cola 0.33l',
         price: 65,
@@ -1299,7 +1299,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 151,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/fykyRfs-cEqCBoM-alOUbID.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681654/729389172_1623579186440910_3941735570310616341_n_rziyhz.jpg',
         emoji: '🥤',
         name: 'Cola Zero 0.33l',
         price: 65,
@@ -1310,7 +1310,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 152,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/lxJYJCB-eFpHQkX-jVUgRzs.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681926/728626760_1331381928464351_1749908681749098803_n_1_tunbzj.jpg',
         emoji: '🥤',
         name: 'Fanta 0.33l',
         price: 65,
@@ -1321,7 +1321,7 @@ export const products: Product<CategoryVinohrady>[] = [
     {
         id: 153,
         cat: 'non-alcoholic-drinks',
-        image: 'https://cdn-media.choiceqr.com/prod-eat-miskaramenmalastrana/menu/WgvPmpk-iUFkfmi-ZwWUxCG.webp',
+        image: 'https://res.cloudinary.com/deiaqixyd/image/upload/v1782681709/733209018_1772906233725642_470002535604481036_n_xprm1b.png',
         emoji: '🥤',
         name: 'Sprite 0.33l',
         price: 65,
